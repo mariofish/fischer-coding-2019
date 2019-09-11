@@ -1,10 +1,12 @@
-<input type= text id="myText01" value="5"><br>
+<input type= text id="myText01" value="3"><br>
 
 <input type=button value=run onClick="{
+    if (mytemp == 3){}
 let myTemp = document.getElementById('myText01').value
-if (mytemp == 3){document.getElementById('myDiv01').innerHTML = ('a')
-else 
-document.getElementById('myDiv01').innerHTML = myTemp
-}">
+document.getElementById('myDiv01').innerHTML = ('a')
+else {document.getElementById('myDiv01').innerHTML = ('b')}
+}"
+
+>
 
 <div id="myDiv01">...</div>
