@@ -20,17 +20,17 @@ else
 <!-- Colour Change -->
 <h1><small> <font color="#FF0000">C</font><font color="#FF8000">o</font><font color="#FFE000">l</font><font color="#46FF00">o</font><font color="#0068FF">u</font><font color="#6800FF">r</font> Change </small></h1><br>
 <i> 3 = a, else = b </i><br>
-<input type= text id="myText01" value="3"><br>
+<input type= text id="myText01" value="red"><br>
 
 <input type=button value=run onClick="{
 let myTemp = document.getElementById('myText01').value
-if (myTemp == 3)
+if (myTemp == red)
 {
-    document.getElementById('myDiv01').innerHTML = ('a')
+    document.getElementById('myDiv01').innerHTML = ('<font color="#FF0000">red</font>')
 }
 else
 {
-    document.getElementById('myDiv01').innerHTML = ('b')}
+    document.getElementById('myDiv01').innerHTML = ('null')}
 }"
 >
 <div id="myDiv01">...</div>
