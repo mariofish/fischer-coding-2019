@@ -1,3 +1,5 @@
+<!-- If statement -->
+<h1> If/Else </h1><br>
 <i> 3 = a, else = b </i><br>
 <input type= text id="myText01" value="3"><br>
 
@@ -12,5 +14,23 @@ else
     document.getElementById('myDiv01').innerHTML = ('b')}
 }"
 >
+<div id="myDiv01">...</div>
 
+<br>
+<!-- Colour Change -->
+<h1> <font color="#DB0F0F">Colour</font> Change </h1><br>
+<i> 3 = a, else = b </i><br>
+<input type= text id="myText01" value="3"><br>
+
+<input type=button value=run onClick="{
+let myTemp = document.getElementById('myText01').value
+if (myTemp == 3)
+{
+    document.getElementById('myDiv01').innerHTML = ('a')
+}
+else
+{
+    document.getElementById('myDiv01').innerHTML = ('b')}
+}"
+>
 <div id="myDiv01">...</div>
