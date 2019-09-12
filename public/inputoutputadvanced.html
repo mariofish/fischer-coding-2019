@@ -21,16 +21,23 @@ else
 <h1><small> <font color="#FF0000">C</font><font color="#FF8000">o</font><font color="#FFE000">l</font><font color="#46FF00">o</font><font color="#0068FF">u</font><font color="#6800FF">r</font> Change </small></h1><br>
 <i> 3 = a, else = b </i>
 <input type= text id="myText02" value="1"><br>
-
+<red=('<h1><small><font color="#0068FF">red</font></small></h1>')>
+<blue=('<h1><small><font color="#FF0000">blue</font></small></h1>')>
 <input type=button value=run onClick="{
 let myTemp2 = document.getElementById('myText02').value
+ 
+
 if (myTemp2 == 1)
 {
-    document.getElementById('myDiv02').innerHTML = ('<h1><small><font color="#FF0000">C</font></small></h1>')
+    document.getElementById('myDiv02').innerHTML = red
+}
+if (myTemp2 == 2)
+{
+    document.getElementById('myDiv02').innerHTML = blue
 }
 else
 {
-    document.getElementById('myDiv02').innerHTML = ('<h1><small><font color="#FF8000">C</font></small></h1>')}
+    document.getElementById('myDiv02').innerHTML = ('unknown')}
 }"
 >
 <div id="myDiv02">...</div>
