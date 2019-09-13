@@ -58,11 +58,11 @@ else
 <br>
 <!-- Age thing -->
 <h1><small> Age thing </small></h1>
-<input type=text id="myName01"value="Name"><br>
-<input type=text id="myAge01"value="16"><br>
+<input type=text id="myName"value="Name"><br>
+<input type=text id="myAge"value="16"><br>
 
 <input type=button value=run onClick="{
-    let myAge = Math.abs(document.getElementById('myAge01').value)
+    let myAge = Math.abs(document.getElementById('myAge').value)
     let myTemp3 = document.getElementById('myDiv03').innerHTML = ('You are a teenager')
     if (myAge <= 12){ myTemp3 = 'is a child'}
     if (myAge >= 20){ myTemp3 = 'is an adult'}
