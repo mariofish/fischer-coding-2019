@@ -1,5 +1,5 @@
 <!-- If statement -->
-<h1><small> If/Else </small></h1>
+<h1><small> Basic If/Else </small></h1>
 <i> 3 = a, else = b </i><br>
 <input type= text id="myText01" value="3"><br>
 
@@ -19,7 +19,7 @@ else
 <br>
 <!-- Colour Change -->
 <h1><small> <font color="#FF0000">C</font><font color="#FF8000">o</font><font color="#FFE000">l</font><font color="#46FF00">o</font><font color="#0068FF">u</font><font color="#6800FF">r</font> Change </small></h1>
-<i>Work In Progress</i><br>
+<i>1=<font color="#FF0000">red</font>, 2=<font color="#FF8000">orange</font>, 3=<font color="#FFE000">yellow</font>, 4=<font color="#46FF00">green</font>, 5=<font color="#0068FF">blue</font>, 6=<font color="#6800FF">purple</font></i><br>
 <input type= text id="myText02" value="1"><br>
 
 <input type=button value=run onClick="{
@@ -27,11 +27,27 @@ let myTemp2 = document.getElementById('myText02').value
  
 if (myTemp2 == 1)
 {
-    document.getElementById('myDiv02').innerHTML = red
+    document.getElementById('myDiv02').innerHTML = ('<p style= color:#FF0000;>red</p>')
 }
-if (myTemp2 == 2)
+else if (myTemp2 == 2)
 {
-    document.getElementById('myDiv02').innerHTML = blue
+    document.getElementById('myDiv02').innerHTML = ('<p style= color:#FF8000;>orange</p>')
+}
+else if (myTemp2 == 3)
+{
+    document.getElementById('myDiv02').innerHTML = ('<p style= color:#FFE000;>yellow</p>')
+}
+else if (myTemp2 == 4)
+{
+    document.getElementById('myDiv02').innerHTML = ('<p style= color:#46FF00;>green</p>')
+}
+else if (myTemp2 == 5)
+{
+    document.getElementById('myDiv02').innerHTML = ('<p style= color:#0068FF;>blue</p>')
+}
+else if (myTemp2 == 6)
+{
+    document.getElementById('myDiv02').innerHTML = ('<p style= color:#6800FF;>purple</p>')
 }
 else
 {
@@ -39,3 +55,22 @@ else
 }"
 >
 <div id="myDiv02">...</div>
+<br>
+<!-- Age thing -->
+<h1><small> Age Thingy </small></h1>
+<input type=text id="myName"value="Name"><br>
+<input type=text id="myAge"value="16"><br>
+
+<input type=button value=run onClick="{
+    let myAge = Math.abs(document.getElementById('myAge01').value)
+    let myTemp3 = 'You are a teenager'
+    if (myAge01 <= 12){ myTemp3 = 'is a child'}
+    else if (myAge01 >= 20){ myTemp3 = 'is an adult'}
+    else if (myAge01 >= 65){ myTemp3 = 'is elderly'}
+    else if (myAge01 >= 95){ myTemp3 = 'is on their death bed'} 
+    else (myAge01 >= 105){ myTemp3 = 'is dead ):'}
+
+    document.getElementById('myDiv03').innerHTML = myTemp3}
+}"
+>
+<div id="myDiv03">...</div>
