@@ -24,53 +24,53 @@ else
 
 <input type=button value=run onClick="{
 let myTemp2 = document.getElementById('myText02').value
- 
+
 if (myTemp2 == 1)
 {
-    document.getElementById('myDiv02').innerHTML = ('<p style= color:#FF0000;>red</p>')
+    document.getElementById('myDiv02').innerHTML = ('<p style= color:#FF0000;>colour</p>')
 }
 else if (myTemp2 == 2)
 {
-    document.getElementById('myDiv02').innerHTML = ('<p style= color:#FF8000;>orange</p>')
+    document.getElementById('myDiv02').innerHTML = ('<p style= color:#FF8000;>colour</p>')
 }
 else if (myTemp2 == 3)
 {
-    document.getElementById('myDiv02').innerHTML = ('<p style= color:#FFE000;>yellow</p>')
+    document.getElementById('myDiv02').innerHTML = ('<p style= color:#FFE000;>colour</p>')
 }
 else if (myTemp2 == 4)
 {
-    document.getElementById('myDiv02').innerHTML = ('<p style= color:#46FF00;>green</p>')
+    document.getElementById('myDiv02').innerHTML = ('<p style= color:#46FF00;>colour</p>')
 }
 else if (myTemp2 == 5)
 {
-    document.getElementById('myDiv02').innerHTML = ('<p style= color:#0068FF;>blue</p>')
+    document.getElementById('myDiv02').innerHTML = ('<p style= color:#0068FF;>colour</p>')
 }
 else if (myTemp2 == 6)
 {
-    document.getElementById('myDiv02').innerHTML = ('<p style= color:#6800FF;>purple</p>')
+    document.getElementById('myDiv02').innerHTML = ('<p style= color:#6800FF;>colour</p>')
 }
 else
 {
-    document.getElementById('myDiv02').innerHTML = ('unknown')}
+    document.getElementById('myDiv02').innerHTML = ('colour')}
 }"
 >
-<div id="myDiv02">...</div>
-<br>
+<div id="myDiv02"><br>colour</div>
+
 <!-- Age thing -->
 <h1><small> Age Thingy </small></h1>
-<input type=text id="myName"value="Name"><br>
-<input type=text id="myAge"value="16"><br>
+<input type=text id="myName01"value="Name"><br>
+<input type=text id="myAge01"value="16"><br>
 
 <input type=button value=run onClick="{
     let myAge = Math.abs(document.getElementById('myAge01').value)
+    let myName = document.getElementById('myName01').value
     let myTemp3 = 'You are a teenager'
-    if (myAge01 <= 12){ myTemp3 = 'is a child'}
-    else if (myAge01 >= 20){ myTemp3 = 'is an adult'}
-    else if (myAge01 >= 65){ myTemp3 = 'is elderly'}
-    else if (myAge01 >= 95){ myTemp3 = 'is on their death bed'} 
-    else (myAge01 >= 105){ myTemp3 = 'is dead ):'}
+    if (myAge <= 12){ myTemp3 = 'is a child'}
+    if (myAge >= 20 && myAge < 65 ){ myTemp3 = 'is an adult'}
+    if (myAge >= 65 && myAge < 95 ) { myTemp3 = 'is elderly'}
+    if (myAge >= 95 && myAge < 105 ) { myTemp3 = 'is on their death bed'}
+    if (myAge >= 105){ myTemp3 = 'is dead'}
 
-    document.getElementById('myDiv03').innerHTML = myTemp3}
-}"
->
+    document.getElementById('myDiv03').innerHTML = myTemp3
+}">
 <div id="myDiv03">...</div>
