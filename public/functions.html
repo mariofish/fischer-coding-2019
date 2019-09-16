@@ -1,1 +1,26 @@
+<script>
+function myElementFunction(){
+    let myTemp = document.getElementById('myText01').value
+    let mySum = ''
+    document.getElementById('myDiv01').innerHTML = ' '
+
+    myArray = new Array()
+    myArray[0] 'Ted'
+    myArray[1] 'Jerry'
+    myArray[2] 'Rizzy'
+
+    for (let myLoop=0;  myLoop < myTemp;  myLoop++){
+        mySum += 'Loop #: ' + myLoop + ' array entry: ' + myArray[myLoop] + '<br>'
+    }
+    document.getElementById('myDiv01').innerHTML = mySum
+}
+</script>
+
+<input type=text id="myText01" value="3"><br>
+
+<input type=button value="loop-array-function-event" onClick= "{
+    myExampleFunction()
+}">
+<div id="myDiv01">...</div>
+
 
