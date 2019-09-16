@@ -1,1 +1,15 @@
+<input type=text id="myText01" value="3"><br>
 
+<input type=button value="Loop" onClick="{
+
+    let myTemp = document.getElementById('myText01').value
+    let mySum = ''
+    document.getElementById('myDiv01').innerHTML = ' '
+
+    for (let myLoop=0;  myLoop < myTemp;  myloop++){
+        mySum += 'Loop #: ' '+myLoop+'<br>'
+    }
+    document.getElementById('myDiv01').innerHTML = mySum
+}">
+
+<div id="myDiv01">...</div>
