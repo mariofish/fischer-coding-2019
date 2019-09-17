@@ -1,26 +1,58 @@
+<!-- Name Function -->
+<h1><small> Name Function </small></h1>
 <script>
-function myElementFunction(){
+function myExampleFunction(){
     let myTemp = document.getElementById('myText01').value
     let mySum = ''
     document.getElementById('myDiv01').innerHTML = ' '
-
     myArray = new Array()
-    myArray[0] 'Ted'
-    myArray[1] 'Jerry'
-    myArray[2] 'Rizzy'
-
+    myArray[0] = 'Ted'
+    myArray[1] = 'Jerry'
+    myArray[2] = 'Rizzy'
+    myArray[3] = 'Tyrone'
+    myArray[4] = 'Doug'
     for (let myLoop=0;  myLoop < myTemp;  myLoop++){
-        mySum += 'Loop #: ' + myLoop + ' array entry: ' + myArray[myLoop] + '<br>'
+        mySum += 'Loop #: ' + myLoop + ' Array Entry: ' + myArray[myLoop] + '<br>'
     }
     document.getElementById('myDiv01').innerHTML = mySum
 }
 </script>
 
-<input type=text id="myText01" value="3"><br>
+<input type=text id="myText01" value="5"><br>
 
 <input type=button value="loop-array-function-event" onClick= "{
     myExampleFunction()
 }">
+
 <div id="myDiv01">...</div>
 
+<br>
+<!-- Placeholder -->
+<h1><small> Moon Cycle </small></h1>
 
+<script>
+function myExampleFunction2(){
+    let myTemp = document.getElementById('myText02').value
+    let mySum = ''
+    document.getElementById('myDiv02').innerHTML = ' '
+    myArray = new Array()
+    myArray[0] = '<img src="cycle0.jpg" alt="Cycle 1" width="100" height="100">'
+    myArray[1] = '<img src="cycle1.jpg" alt="Cycle 2" width="100" height="100">'
+    myArray[2] = '<img src="cycle2.jpg" alt="Cycle 3" width="100" height="100">'
+    myArray[3] = '<img src="cycle3.jpg" alt="Cycle 4" width="100" height="100">'
+    myArray[4] = '<img src="cycle4.jpg" alt="Cycle 5" width="100" height="100">'
+    myArray[5] = '<img src="cycle5.jpg" alt="Cycle 6" width="100" height="100">'
+    for (let myLoop=0;  myLoop < myTemp;  myLoop++){
+        mySum += 'Moon Cycle #: ' + myLoop + myArray[myLoop] + '<br>'
+    }
+    document.getElementById('myDiv02').innerHTML = mySum
+}
+</script>
+
+<input type=text id="myText02" value="5"><br>
+
+<input type=button value="loop-array-function-event" onClick= "{
+    myExampleFunction2()
+}">
+
+<div id="myDiv02">...</div>
