@@ -27,7 +27,7 @@ function myExampleFunction(){
 <div id="myDiv01">...</div>
 
 <br>
-<!-- Placeholder -->
+<aside><!-- Placeholder -->
 <h1><small> Moon Cycle </small></h1>
 
 <script>
@@ -36,12 +36,19 @@ function myExampleFunction2(){
     let mySum = ''
     document.getElementById('myDiv02').innerHTML = ' '
     myArray = new Array()
-    myArray[0] = '<img src="cycle0.jpg" alt="Cycle 1" width="100" height="100">'
-    myArray[1] = '<img src="cycle1.jpg" alt="Cycle 2" width="100" height="100">'
-    myArray[2] = '<img src="cycle2.jpg" alt="Cycle 3" width="100" height="100">'
-    myArray[3] = '<img src="cycle3.jpg" alt="Cycle 4" width="100" height="100">'
-    myArray[4] = '<img src="cycle4.jpg" alt="Cycle 5" width="100" height="100">'
-    myArray[5] = '<img src="cycle5.jpg" alt="Cycle 6" width="100" height="100">'
+    myArray[0] = '<img src="https://github.com/mariofish/fischer-coding-2019/blob/master/public/assets/cycle0.png?raw=true" alt="Cycle 1" width="100" height="100">'
+    myArray[1] = '<img src="https://github.com/mariofish/fischer-coding-2019/blob/master/public/assets/cycle1.png?raw=true" alt="Cycle 2" width="100" height="100">'
+    myArray[2] = '<img src="https://github.com/mariofish/fischer-coding-2019/blob/master/public/assets/cycle2.png?raw=true" alt="Cycle 3" width="100" height="100">'
+    myArray[3] = '<img src="https://github.com/mariofish/fischer-coding-2019/blob/master/public/assets/cycle3.png?raw=true" alt="Cycle 4" width="100" height="100">'
+    myArray[4] = '<img src="https://github.com/mariofish/fischer-coding-2019/blob/master/public/assets/cycle4.png?raw=true" alt="Cycle 5" width="100" height="100">'
+    myArray[5] = '<img src="https://github.com/mariofish/fischer-coding-2019/blob/master/public/assets/cycle5.png?raw=true" alt="Cycle 6" width="100" height="100">'
+    myArray[6] = '<img src="https://github.com/mariofish/fischer-coding-2019/blob/master/public/assets/cycle4.png?raw=true" alt="Cycle 5" width="100" height="100">'
+    myArray[7] = '<img src="https://github.com/mariofish/fischer-coding-2019/blob/master/public/assets/cycle3.png?raw=true" alt="Cycle 4" width="100" height="100">'
+    myArray[8] = '<img src="https://github.com/mariofish/fischer-coding-2019/blob/master/public/assets/cycle2.png?raw=true" alt="Cycle 3" width="100" height="100">'
+    myArray[9] = '<img src="https://github.com/mariofish/fischer-coding-2019/blob/master/public/assets/cycle1.png?raw=true" alt="Cycle 2" width="100" height="100">'
+    myArray[10] = '<img src="https://github.com/mariofish/fischer-coding-2019/blob/master/public/assets/cycle0.png?raw=true" alt="Cycle 1" width="100" height="100">'
+
+
     for (let myLoop=0;  myLoop < myTemp;  myLoop++){
         mySum += 'Moon Cycle #: ' + myLoop + myArray[myLoop] + '<br>'
     }
@@ -54,5 +61,5 @@ function myExampleFunction2(){
 <input type=button value="loop-array-function-event" onClick= "{
     myExampleFunction2()
 }">
-
 <div id="myDiv02">...</div>
+</aside>
