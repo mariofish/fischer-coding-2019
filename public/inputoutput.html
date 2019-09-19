@@ -70,17 +70,34 @@ else
 
 <!-- Age thing -->
 <h1><small> Age Thingy </small></h1>
-<i>You can change the name</i><br>
+<i>You can change the name and gender</i><br>
+<label for="genderMan">Male</label>
+<input type=radio name="Gender" id="myGender01" value="1" checked>
+<label for="genderWoman">Female</label>
+<input type=radio name="Gender" id="myGender01" value="2"><br>
+
 <input type=text id="myName01"value="John"><br>
 <input type=text id="myAge01"value="16"><br>
 
 <input type=button value=run onClick="{
+
     let myAge = Math.abs(document.getElementById('myAge01').value)
     let myName = document.getElementById('myName01').value
-    let myTemp3 = myName + ' is a teenager'
-    if (myAge <= 12){ myTemp3 = myName + ' is a child'}
+    let myGender = document.getElementById('myGender01').value;
+    if (myGender == 1)
+    {
+        document.getElementById('myGender01').innerHTML = ('Male')
+        }
+        else
+        {
+        document.getElementById('myGender01').innerHTML = (' ')
+    }
+
+    let myTemp3 = myName + ' is a teenaged '
+    if (myAge <= 4){ myTemp3 = myName + ' is a baby'}
+    if (myAge >= 4 && myAge < 12){ myTemp3 = myName + ' is a child'}
     if (myAge >= 20 && myAge < 65 ){ myTemp3 = myName + ' is an adult'}
-    if (myAge >= 65 && myAge < 95 ) { myTemp3 = myName + ' is elderly'}
+    if (myAge >= 65 && myAge < 95 ) { myTemp3 = myName + ' is a senior'}
     if (myAge >= 95 && myAge < 105 ) { myTemp3 = myName + ' is on their death bed'}
     if (myAge >= 105){ myTemp3 = myName + ' is dead'}
 
