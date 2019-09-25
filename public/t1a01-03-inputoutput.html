@@ -72,9 +72,9 @@ else
 <h1><small> Age Thingy </small></h1>
 <i>You can change the name and gender</i><br>
 <label for="genderMan">Male</label>
-<input type="radio" name="myGender" id="foo" checked>
+<input type="radio" name="myGender" value="man" checked>
 <label for="genderWoman">Female</label>
-<input type="radio" name="myGender" id="bar"><br>
+<input type="radio" name="myGender" value="woman"><br>
 
 <input type=text id="myName01"value="John"><br>
 <input type=text id="myAge01"value="16"><br>
@@ -83,8 +83,9 @@ else
 
     let myAge = Math.abs(document.getElementById('myAge01').value)
     let myName = document.getElementById('myName01').value
+    let myGender = document.getElementByName('myGender').value
 
-    let myTemp3 = myName + ' is a teenager '
+    let myTemp3 = myName + ' is a teenager ' + myGender
     if (myAge <= 4){ myTemp3 = myName + ' is a baby'}
     if (myAge >= 4 && myAge < 12){ myTemp3 = myName + ' is a child'}
     if (myAge >= 20 && myAge < 65 ){ myTemp3 = myName + ' is an adult'}
