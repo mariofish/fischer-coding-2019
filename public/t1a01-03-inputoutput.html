@@ -83,9 +83,8 @@ else
 
     let myAge = Math.abs(document.getElementById('myAge01').value)
     let myName = document.getElementById('myName01').value
-    let myGender = document.getElementByName('myGender').value
 
-    let myTemp3 = myName + ' is a teenager ' + myGender
+    let myTemp3 = myName + ' is a teenager '
     if (myAge <= 4){ myTemp3 = myName + ' is a baby'}
     if (myAge >= 4 && myAge < 12){ myTemp3 = myName + ' is a child'}
     if (myAge >= 20 && myAge < 65 ){ myTemp3 = myName + ' is an adult'}
@@ -96,3 +95,4 @@ else
     document.getElementById('myDiv03').innerHTML = myTemp3
 }">
 <div id="myDiv03">...</div>
+
