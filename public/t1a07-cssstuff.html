@@ -1,5 +1,27 @@
-<div style="background:white url(//www.html.am/images/backgrounds/background-image-2.gif) repeat fixed;width:1920px;height:2200px;">
-
+</div>
+<head>
+<style>
+          body {
+		      transition: filter 0.7s, background-color 0.7s, background-image 0.7s;
+			  background:white url(https://github.com/mariofish/sites/blob/master/mods/niftyblocks/background.png?raw=true)
+          }
+		  iframe {
+			  transition: filter 0.7s;
+		  }
+          * {
+		      font-family: Arial, Helvetica, sans-serif;
+		  }
+          #main {
+              margin: auto;
+              top: 100%;
+              width: 50.000em;
+              border-radius: 12px;
+              transition: filter 0.7s, background-image 0.7s;
+			  background-color: #e1e4ea;
+          }
+</style>
+</head>
+</div>
 <style>
 h1 {
   border-style: outset;
@@ -35,7 +57,27 @@ onclick="{
 <p>Regular paragraph</p>
 <p class="ex">This is a paragraph with class="ex". This text is blue.</p>
 
-<br><br><br>
+<html>
+<head>
+<style> 
+p.test1 {
+  writing-mode: horizontal-tb; 
+}
+
+span.test2 {
+  writing-mode: vertical-rl; 
+}
+</style>
+</head>
+<body>
+
+<p class="test1">Some text with default writing-mode.</p>
+
+<p>This is text in <span class="test2">vertical</span> writing-mode.</p>
+
+</body>
+</html>
+
 
 <h2>You should try:</h2>
 
@@ -74,4 +116,5 @@ ul {
 </body>
 </html>
 
+</div>
 </div>
