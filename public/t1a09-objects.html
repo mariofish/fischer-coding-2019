@@ -1,39 +1,16 @@
+<h1 align=center>Objects</h1>
+<i align=center> Objects, decisions, decimals by Fischer</i><br>
 
-<!-- Age thing -->
-<h1><small> Doctron 3000 </small></h1>
-<i>You can change the name, gender, and the tempature</i><br>
-<label for="genderMan">Male</label>
-<input type="radio" name="myGender" value="man" checked>
-<label for="genderWoman">Female</label>
-<input type="radio" name="myGender" value="woman"><br>
+You add bodyTemp and determine if the user ha a fever<br>
+advanced: input ouput the body temp into the object<br>
 
-<input type=text id="myName01"value="John"><br>
-<input type=text id="myAge01"value="16"><br>
-<input type=text id="myBodyTemp01"value="36">degrees Celcius<br>
+Body Temp: <input type=text id="myText01" value"36.1">degrees Celcious
 
-<select id="myText02" size=1 onChange="{
-    let myTemp = document.getElementById('myText02').value
-    document.getElementById('myDiv02').innerHTML = myTemp2
+<input type=button value="Input/Output" onlick="{
+    let myPerson = {'age':'22', 'name':'fred'};
+
+    let myTemp = document.getElementById('myText01').value
+
+    let muPrint
+
 }">
-<option value="red">red
-<option value="orange">orange
-
-</select>
-
-<input type=button value=run onClick="{
-
-    let myAge = Math.abs(document.getElementById('myAge01').value)
-    let myName = document.getElementById('myName01').value
-    let myBodyTemp = Math.abs(document.getElementById('myBodyTemp01').value)
-
-    let myTemp3 = myName + ' is a teenager ' + myBodyTemp
-    if (myAge <= 4){ myTemp3 = myName + ' is a baby'}
-    if (myAge >= 4 && myAge < 12){ myTemp3 = myName + ' is a child and is ' }
-    if (myAge >= 20 && myAge < 65 ){ myTemp3 = myName + ' is an adult and is '}
-    if (myAge >= 65 && myAge < 95 ) { myTemp3 = myName + ' is a senior and is'}
-    if (myAge >= 95 && myAge < 105 ) { myTemp3 = myName + ' is on their death bed and is '}
-    if (myAge >= 105){ myTemp3 = myName + ' is dead'}
-
-    document.getElementById('myDiv03').innerHTML = myTemp3
-}">
-<div id="myDiv03">...</div>
