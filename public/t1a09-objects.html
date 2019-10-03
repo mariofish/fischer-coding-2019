@@ -4,13 +4,55 @@
 You add bodyTemp and determine if the user ha a fever<br>
 advanced: input ouput the body temp into the object<br>
 
-Body Temp: <input type=text id="myText01" value"36.1">degrees Celcious
+<body id="myBody">
 
-<input type=button value="Input/Output" onlick="{
-    let myPerson = {'age':'22', 'name':'fred'};
+Body Temp: <input type=text id="myText01" value="36.1">°C
+<br>
+<input type=button value="First Name" id="button01"onclick="{
+var myObj = {}
+myObj=JSON.parse(document.getElementById('myTextA01').value)
 
-    let myTemp = document.getElementById('myText01').value
+document.getElementById('myDiv01').innerHTML = 'Mr/Mrs '+ myObj.lastname+ '`s first name is '+myObj.firstname
 
-    let muPrint
+
+}"><input type=button value="Last Name" id="button02"onclick="{
+var myObj = {}
+myObj=JSON.parse(document.getElementById('myTextA01').value)
+
+document.getElementById('myDiv01').innerHTML = myObj.firstname +'`s last name is '+myObj.lastname
+
 
 }">
+<input type=button value="Age" id="button03"onclick="{
+var myObj = {}
+myObj=JSON.parse(document.getElementById('myTextA01').value)
+
+document.getElementById('myDiv01').innerHTML = myObj.firstname+' is '+myObj.age+' years old'
+
+
+}">
+<input type=button value="Birth Date" id="button04"onclick="{
+var myObj = {}
+myObj=JSON.parse(document.getElementById('myTextA01').value)
+
+document.getElementById('myDiv01').innerHTML = myObj.firstname+' was born '+myObj.birthdate
+
+}">
+<input type=button value="hEAT" id="button04"onclick="{
+var myObj = {}
+myObj=JSON.parse(document.getElementById('myTextA01').value)
+
+document.getElementById('myDiv01').innerHTML = myObj.firstname+' was born '+myObj.birthdate
+
+}">
+<br>
+
+<textarea rows="8" cols="70" id="myTextA01" >{
+"firstname":"Ron",
+"lastname":"Johnson",
+"age":"45",
+"birthdate":"01/01/2000"
+}
+</textarea>
+
+<div id="myDiv01">...</div>
