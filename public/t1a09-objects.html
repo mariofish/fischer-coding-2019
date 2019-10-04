@@ -58,7 +58,7 @@ document.getElementById('myDiv01').innerHTML = myObj.firstname+' is '+myObj.body
 
 <!-- Age thing -->
 <h1><small> Fever Thingy </small></h1>
-<i>You can change the name and gender</i><br>
+<i>You can change the name and gender and body temperature</i><br>
 <label for="genderMan">Male</label>
 <input type="radio" name="myGender" value="man" checked>
 <label for="genderWoman">Female</label>
@@ -78,10 +78,11 @@ Body Temp:<br> <input type=text id="myBodyTemp01" value="36.1">°C <br>
     if (myAge >= 4 && myAge < 12){ myTemp3 = myName + ' is a child'}
     if (myAge >= 20 && myAge < 65 ){ myTemp3 = myName + ' is an adult'}
     if (myAge >= 65 && myAge < 95 ) { myTemp3 = myName + ' is a senior'}
+    if (myAge == 69) { myTemp3 = 'nice'}
     if (myAge >= 95 && myAge < 105 ) { myTemp3 = myName + ' is on their death bed'}
     if (myAge >= 105){ myTemp3 = myName + ' is dead'}
 
-    let myTemp4 = myName + ' is a teenager' 
+    let myTemp4 = myName + ' is a teenager '
     if (myBodyTemp <= 4){ myTemp4 = myName + '`s body temperature is lizard-like'}
     if (myBodyTemp >= 4 && myBodyTemp < 12){ myTemp4 = myName + 's` body temperature is cold'}
     if (myBodyTemp >= 20 && myBodyTemp < 65 ){ myTemp4 = myName + '`s body temperature is normal'}
