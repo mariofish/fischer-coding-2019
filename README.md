@@ -9,6 +9,6 @@ gitpod at
 https://gitpod.io/github.com/mariofish/fischer-coding-2019
 
 ```
-apachetctl start
+apachectl start
 
 ```
