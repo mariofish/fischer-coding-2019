@@ -1,0 +1,31 @@
+<h1 align=center>Object Array</h1>
+<h4 align=center><i> Object arrays by Fischer</i></h4>
+
+Its a mystery what this is acctually supposed to do<br>
+
+<body id="myBody">
+<br>
+<input type=button value="Show Object Array" id="button01"onclick="{
+var myObj = {}
+myObj=JSON.parse(document.getElementById('myTextA01').value)
+
+document.getElementById('myDiv01').innerHTML = 'Mr/Mrs '+ myObj.lastname+ '`s first name is '+myObj.firstname
+
+
+}"><input type=button value="Show Array Object" id="button02"onclick="{
+var myObj = {}
+myObj=JSON.parse(document.getElementById('myTextA01').value)
+
+document.getElementById('myDiv01').innerHTML = myObj.firstname +'`s last name is '+myObj.lastname
+}">
+<br>
+
+<textarea rows="8" cols="70" id="myTextA01" >{
+"firstname":"Ron",
+"lastname":"Johnson",
+"age":"19",
+"birthdate":"01/01/2000"
+}
+</textarea>
+
+<div id="myDiv01">...</div>
