@@ -3,29 +3,21 @@
 
 Its a mystery what this is acctually supposed to do<br>
 
-<body id="myBody">
-<br>
-<input type=button value="Show Object Array" id="button01"onclick="{
-var myObj = {}
-myObj=JSON.parse(document.getElementById('myTextA01').value)
+<input type=button value="Show Object Array" onclick="{
+    let myObjectArray = {'dog', 'cheese', 'lasagna', 'banana'};
 
-document.getElementById('myDiv01').innerHTML = 'Mr/Mrs '+ myObj.lastname+ '`s first name is '+myObj.firstname
-
-
-}"><input type=button value="Show Array Object" id="button02"onclick="{
-var myObj = {}
-myObj=JSON.parse(document.getElementById('myTextA01').value)
-
-document.getElementById('myDiv01').innerHTML = myObj.firstname +'`s last name is '+myObj.lastname
+    let myPrintout='myObjectArray = '+JSON.stringify(myObjectArray,null,3)
+    document.getElementById('myTextArea01').value = myPrintout
+    document.getElementById('myDiv01').innerHTML = 'Nothing of intrest here'
 }">
-<br>
 
-<textarea rows="8" cols="70" id="myTextA01" >{
-"firstname":"Ron",
-"lastname":"Johnson",
-"age":"19",
-"birthdate":"01/01/2000"
-}
-</textarea>
+<input type=button value="Show Array Object" onclick="{
+    let myArrayObject = ['cat', 'cream', 'tortellini', 'apple'];
+
+    let myPrintout='myArrayObject = '+JSON.stringify(myArrayObject,null,3)
+    document.getElementById('myTextArea01').value = myPrintout
+    document.getElementById('myDiv01').innerHTML = 'Nothing of intrest here'
+}">
 
 <div id="myDiv01">...</div>
+<textarea id="myTextArea01" rows=10 cols=80 noWrap>...</textarea>
