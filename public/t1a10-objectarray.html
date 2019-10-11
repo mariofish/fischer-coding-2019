@@ -1,23 +1,39 @@
 <h1 align=center>Object Array</h1>
 <h4 align=center><i> Object arrays by Fischer</i></h4>
 
-Its a mystery what this is acctually supposed to do<br>
+Its a mystery what this is actually supposed to do<br>
 
 <input type=button value="Show Object Array" onclick="{
-    let myObjectArray = {'dog', 'cheese', 'lasagna', 'banana'};
-
-    let myPrintout='myObjectArray = '+JSON.stringify(myObjectArray,null,3)
+    let myObjArray = {
+'firstname':'Ron',
+'lastname':'Johnson',
+'diseases':['leprosy', 'flu', 'headache'],
+'favfoods':['bananas', 'cream', 'tortellini', 'apples'],
+};
+    let myPrintout='myObjArray = '+JSON.stringify(myObjArray,null,3)
     document.getElementById('myTextArea01').value = myPrintout
     document.getElementById('myDiv01').innerHTML = 'Nothing of intrest here'
+    document.getElementById('myDiv02').innerHTML = 'Mr/Mrs '+ myObjArray.lastname+ '`s first name is '+myObjArray.firstname
+    document.getElementById('myDiv03').innerHTML = myObjArray.firstname+ ' has '+myObjArray.diseases[0]
+    document.getElementById('myDiv04').innerHTML = myObjArray.firstname+ ' has the '+myObjArray.diseases[1]
+    document.getElementById('myDiv05').innerHTML = myObjArray.firstname+ ' likes to eat '+myObjArray.favfoods[3]
 }">
-
 <input type=button value="Show Array Object" onclick="{
-    let myArrayObject = ['cat', 'cream', 'tortellini', 'apple'];
+    let myArrayObj = [
+    'bananas',
+    'cream',
+    'tortellini',
+    'apples'
+    ];
 
-    let myPrintout='myArrayObject = '+JSON.stringify(myArrayObject,null,3)
+    let myPrintout='myArrayObj = '+JSON.stringify(myArrayObj,null,3)
     document.getElementById('myTextArea01').value = myPrintout
     document.getElementById('myDiv01').innerHTML = 'Nothing of intrest here'
 }">
 
 <div id="myDiv01">...</div>
-<textarea id="myTextArea01" rows=10 cols=80 noWrap>...</textarea>
+<textarea id="myTextArea01" rows=16 cols=40 noWrap>...</textarea>
+<div id="myDiv02">...</div>
+<div id="myDiv03">...</div>
+<div id="myDiv04">...</div>
+<div id="myDiv05">...</div>
