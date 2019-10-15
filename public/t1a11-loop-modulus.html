@@ -1,0 +1,24 @@
+<h1 align=center>Loop Modules</h1>
+<h4 align=center><i>by Fischer</i></h4>
+
+ Enter any number of loops: <input type=text id="myText01" value="25"><br><br>
+
+<input type=button value="Modules Decisions" onclick="{
+    let myLoopMax
+    let myTemp
+    let myFontColour
+
+    for (let myLoop=0; myLoop <= myLoopMax; myLoop++){
+        myFontColour = 'block'
+        let myMessage = ''
+
+        if (myLoop % 5 == 0)
+        myFontColour = 'green'
+        let myMessage = ' Divisable by 5'
+    }
+    myTemp += '<font color='+myFontColour+'> Loop # ' + myLoop + '</font>' + myMessage + '<br>'
+}
+document.getElementById('myDiv01').innerHTML = myTemp
+}"><br><br>
+
+<div id="myDiv01">...</div>
