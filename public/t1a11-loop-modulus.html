@@ -1,24 +1,56 @@
 <h1 align=center>Loop Modules</h1>
 <h4 align=center><i>by Fischer</i></h4>
 
- Enter any number of loops: <input type=text id="myText01" value="25"><br><br>
+Enter any number of loops <input type=text id="myText01" value="64"><br>
 
 <input type=button value="Modules Decisions" onclick="{
-    let myLoopMax
-    let myTemp
+    let myTemp0 =''
+    let myLoopMax = document.getElementById('myText01').value
+    let myTemp =''
+
     let myFontColour
 
-    for (let myLoop=0; myLoop <= myLoopMax; myLoop++){
-        myFontColour = 'block'
+    for (let myLoop=1; myLoop <= myLoopMax; myLoop++){
+        myFontColour = 'black'
         let myMessage = ''
 
-        if (myLoop % 5 == 0)
-        myFontColour = 'green'
-        let myMessage = ' Divisable by 5'
+        if (myLoop % 2 == 0) {
+            myFontColour = 'blue'
+            myMessage += ' Even,'
+        }
+        if (myLoop % 2) {
+            myFontColour = 'purple'
+            myMessage += ' Odd,'
+        }
+        if (myLoop % 5 == 0) {
+            myFontColour = 'green'
+            myMessage += ' Divisible by 5,'
+        }
+        if (myLoop % 10 == 0) {
+            myFontColour = 'orange'
+            myMessage += ' Divisible by 10,'
+        }
+        if (myLoop % 16 == 0) {
+            myFontColour = 'red'
+            myMessage += ' Multiple of 16,'
+        }
+        if (myLoop == 16) {
+            myFontColour = 'gold'
+            myMessage += ' is my age'
+        }
+        if (myLoop == 42) {
+            myFontColour = 'brown'
+            myMessage += ' is a cool number'
+        }
+        if (myLoop == 57) {
+            myFontColour = 'lime'
+            myMessage += ' is a very cool number'
+        }
+        myTemp0 = '<font color=black> Loop # ' + '0 Even,' + '</font>'+'<br>'
+        myTemp += '<font color='+myFontColour+'> Loop # ' + myLoop + '</font>'+ myMessage +'<br>'
     }
-    myTemp += '<font color='+myFontColour+'> Loop # ' + myLoop + '</font>' + myMessage + '<br>'
-}
-document.getElementById('myDiv01').innerHTML = myTemp
+    document.getElementById('myDiv0').innerHTML = myTemp0
+    document.getElementById('myDiv01').innerHTML = myTemp
 }"><br><br>
-
-<div id="myDiv01">...</div>
+<div id="myDiv0">...</div>
+<div id="myDiv01"></div>
