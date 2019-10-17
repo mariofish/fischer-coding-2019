@@ -1,43 +1,42 @@
-<style>
-h1 {
-}
-</style>
-<style>
-  body {
-          color: white;
-       }
-h1     {
-         color: 01F7D6;
-       }
-p.ex   {
-          color: rgb(0, 0, 0 )
-       }
-</style>
-<div style="background:white url(https://github.com/mariofish/sites/blob/master/mods/niftyblocks/background.png?raw=true) repeat fixed;width:1920px;height:2200px;">
-
-
-
-
 <h1 align=center>Movement Game Test</h1>
-<div style="position:absolute; left:950; top:250; " >This is Jeff</div>
-<div id="myDiv01" style="position:absolute; left:950; top:200; " ><b><img src="https://github.com/mariofish/fischer-coding-2019/blob/master/public/assets/jeff.png?raw=true" alt="Cycle 1" width="50" height="50"><br>
+<div align=center>This is Jeff</div>
+<div id="myDiv01" style="position:absolute; left:250; top:200; " ><b><img src="https://github.com/mariofish/fischer-coding-2019/blob/master/public/assets/jeff.png?raw=true" alt="Cycle 1" width="50" height="50"><br>
 </b></div>
- <a
-<br>
-<div align=center><input type=button value="\/" style="color:white; backrgound-color:red " onclick="{ document.getElementById('myDiv01').style.top = parseInt(document.getElementById('myDiv01').style.top) + 25
+<div align=center><input type=button value="↖" style="color:white; background-color:red; " onclick="{ document.getElementById('myDiv01').style.left = parseInt(document.getElementById('myDiv01').style.left) - 25
+document.getElementById('myDiv01').style.top = parseInt(document.getElementById('myDiv01').style.top) - 25
+}">
+<input type=button value="↑" style="color:white; background-color:red " onclick="{ document.getElementById('myDiv01').style.top = parseInt(document.getElementById('myDiv01').style.top) - 25
+}">
+<input type=button value="↗" style="color:white; background-color:red; " onclick="{ document.getElementById('myDiv01').style.left = parseInt(document.getElementById('myDiv01').style.left) + 25
+document.getElementById('myDiv01').style.top = parseInt(document.getElementById('myDiv01').style.top) - 25
 }"></div>
-<div align=center><input type=button value=">" style="color:white; background-color:red; " onclick="{ document.getElementById('myDiv01').style.left = parseInt(document.getElementById('myDiv01').style.left) + 25
+<div align=center><input type=button value="←" style="color:white; background-color:red; " onclick="{ document.getElementById('myDiv01').style.left = parseInt(document.getElementById('myDiv01').style.left) - 25
+}">
+<input type=button value="→" style="color:white; background-color:red; " onclick="{ document.getElementById('myDiv01').style.left = parseInt(document.getElementById('myDiv01').style.left) + 25
 }"></div>
-<div align=center><input type=button value="/\" style="color:white; backrgound-color:red " onclick="{ document.getElementById('myDiv01').style.top = parseInt(document.getElementById('myDiv01').style.top) - 25
-}"></div>
-<div align=center><input type=button value="<" style="color:white; background-color:red; " onclick="{ document.getElementById('myDiv01').style.left = parseInt(document.getElementById('myDiv01').style.left) - 25
-}"></div>
-<div align=center><input onkeypress="119" onkeypress="{ document.getElementById('myDiv01').style.top = parseInt(document.getElementById('myDiv01').style.top) + 25
-}"></div>
-<div align=center><input onkeypress="97" onkeypress="{ document.getElementById('myDiv01').style.left = parseInt(document.getElementById('myDiv01').style.left) + 25
-}"></div>
-<div align=center><input onkeypress="115" onkeypress="{ document.getElementById('myDiv01').style.top = parseInt(document.getElementById('myDiv01').style.top) - 25
-}"></div>
-<div align=center><input onkeypress="100" onkeypress="{ document.getElementById('myDiv01').style.left = parseInt(document.getElementById('myDiv01').style.left) - 25
-}"></div>
+<div align=center><input type=button value="↙" style="color:white; background-color:red; " onclick="{ document.getElementById('myDiv01').style.left = parseInt(document.getElementById('myDiv01').style.left) - 25
+document.getElementById('myDiv01').style.top = parseInt(document.getElementById('myDiv01').style.top) + 25
+}">
+<input type=button value="↓" style="color:white; background-color:red " onclick="{ document.getElementById('myDiv01').style.top = parseInt(document.getElementById('myDiv01').style.top) + 25
+}">
+<input type=button value="↘" style="color:white; background-color:red; " onclick="{ document.getElementById('myDiv01').style.left = parseInt(document.getElementById('myDiv01').style.left) + 25
+document.getElementById('myDiv01').style.top = parseInt(document.getElementById('myDiv01').style.top) + 25
 
+}"></div>
+<function onkeypress="119" onkeypress="{ document.getElementById('myDiv01').style.top = parseInt(document.getElementById('myDiv01').style.top) + 25
+}">
+<function onkeypress="97" onkeypress="{ document.getElementById('myDiv01').style.left = parseInt(document.getElementById('myDiv01').style.left) + 25
+}">
+<function onkeypress="115" onkeypress="{ document.getElementById('myDiv01').style.top = parseInt(document.getElementById('myDiv01').style.top) - 25
+}">
+<function onkeypress="100" onkeypress="{ document.getElementById('myDiv01').style.left = parseInt(document.getElementById('myDiv01').style.left) - 25
+}">
+
+<script>
+eventTarget.addEventListener("keydown", event => {
+  if (event.isComposing || event.keyCode === 229) {
+    return;
+  }
+  // do something
+});
+</script>
