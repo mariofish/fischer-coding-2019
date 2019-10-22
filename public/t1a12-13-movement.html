@@ -1,3 +1,28 @@
+
+<div><br />
+<head>
+<style>
+          body {
+		      transition: filter 0.7s, background-color 0.7s, background-image 0.7s;
+			  background:white url(https://github.com/mariofish/sites/blob/master/mods/niftyblocks/grass.png?raw=true)
+          }
+		  iframe {
+			  transition: filter 0.7s;
+		  }
+          * {
+		      font-family: Arial, Helvetica, sans-serif;
+		  }
+          #main {
+              margin: auto;
+              top: 100%;
+              width: 50.000em;
+              border-radius: 12px;
+              transition: filter 0.7s, background-image 0.7s;
+			  background-color: #e1e4ea;
+          }
+</style>
+</head>
+</div>
 <h1 align=center>T1A12-13 Movement</h1>
 <div align=center>WASD to move</div>
 <div align=center>This is John
@@ -101,4 +126,20 @@ document.getElementById('myDiv02').style.top = parseInt(document.getElementById(
     if (event.key == 'L'){
         document.getElementById('myDiv02').style.left = parseInt(document.getElementById('myDiv02').style.left) + 5
     }
+    if (event.key == 'w' + 'a'){
+        document.getElementById('myDiv01').style.top = parseInt(document.getElementById('myDiv01').style.top) - 25
+        document.getElementById('myDiv01').style.left = parseInt(document.getElementById('myDiv01').style.left) - 25
+    }
+    if (event.key == 's' + 'a'){
+        document.getElementById('myDiv01').style.top = parseInt(document.getElementById('myDiv01').style.top) + 25
+        document.getElementById('myDiv01').style.left = parseInt(document.getElementById('myDiv01').style.left) - 25
+    }
+    if (event.key == 'w' + 'd'){
+        document.getElementById('myDiv01').style.top = parseInt(document.getElementById('myDiv01').style.top) - 25
+        document.getElementById('myDiv01').style.left = parseInt(document.getElementById('myDiv01').style.left) + 25
+    }
+    if (event.key == 's' + 'd'){
+        document.getElementById('myDiv01').style.top = parseInt(document.getElementById('myDiv01').style.top) + 25
+        document.getElementById('myDiv01').style.left = parseInt(document.getElementById('myDiv01').style.left) + 25
+   }
 }">
