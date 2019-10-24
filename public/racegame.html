@@ -1,0 +1,110 @@
+<div><br />
+<head>
+<style>
+          body {
+		      transition: filter 0.7s, background-color 0.7s, background-image 0.7s;
+			  background:white url(https://github.com/mariofish/fischer-coding-2019/blob/master/public/assets/grass.png?raw=true)
+          }
+		  iframe {
+			  transition: filter 0.7s;
+		  }
+          * {
+		      font-family: Arial, Helvetica, sans-serif;
+		  }
+          #main {
+              margin: auto;
+              top: 100%;
+              width: 50.000em;
+              border-radius: 12px;
+              transition: filter 0.7s, background-image 0.7s;
+			  background-color: #e1e4ea;
+          }
+</style>
+</head>
+</div>
+<h1 align=center>Racing game</h1>
+<div align=center>WASD to move</div>
+<div id="myDiv01" style="position:absolute; left:20; top:200; " ><b><img src="https://github.com/mariofish/fischer-coding-2019/blob/master/public/assets/blueman_1.png?raw=true" alt="Jeff" width="50" height="50"><br>
+</b></div>
+<div id="myDiv02" style="position:absolute; left:20; top:250; " ><b><img src="https://github.com/mariofish/fischer-coding-2019/blob/master/public/assets/orangeman_1.png?raw=true" alt="Ron" width="50" height="50"><br>
+</b></div>
+<div align=center>This is Orange
+<div align=center>IJKL to move
+<!-- Jeff movement -->
+<body onkeydown="{
+    if (event.key == 'w'){
+        document.getElementById('myDiv01').style.top = parseInt(document.getElementById('myDiv01').style.top) - 10
+    }
+    if (event.key == 'a'){
+        document.getElementById('myDiv01').style.left = parseInt(document.getElementById('myDiv01').style.left) - 10
+    }
+    if (event.key == 's'){
+        document.getElementById('myDiv01').style.top = parseInt(document.getElementById('myDiv01').style.top) + 10
+
+    }
+    if (event.key == 'd'){
+        document.getElementById('myDiv01').style.left = parseInt(document.getElementById('myDiv01').style.left ) + 10
+
+    }
+    <!-- capitals -->
+    if (event.key == 'W'){
+        document.getElementById('myDiv01').style.top = parseInt(document.getElementById('myDiv01').style.top) - 10
+    }
+    if (event.key == 'A'){
+        document.getElementById('myDiv01').style.left = parseInt(document.getElementById('myDiv01').style.left) - 10
+    }
+    if (event.key == 'S'){
+        document.getElementById('myDiv01').style.top = parseInt(document.getElementById('myDiv01').style.top) + 10
+    }
+    if (event.key == 'D'){
+        document.getElementById('myDiv01').style.left = parseInt(document.getElementById('myDiv01').style.left) + 10
+<!-- Ron Movement -->
+    }
+    if (event.key == 'i'){
+        document.getElementById('myDiv02').style.top = parseInt(document.getElementById('myDiv02').style.top) - 10
+    }
+    if (event.key == 'j'){
+        document.getElementById('myDiv02').style.left = parseInt(document.getElementById('myDiv02').style.left) - 10
+    }
+    if (event.key == 'k'){
+        document.getElementById('myDiv02').style.top = parseInt(document.getElementById('myDiv02').style.top) + 10
+    }
+    if (event.key == 'l'){
+        document.getElementById('myDiv02').style.left = parseInt(document.getElementById('myDiv02').style.left) + 10
+    }
+    <!-- capitals -->
+    if (event.key == 'I'){
+        document.getElementById('myDiv02').style.top = parseInt(document.getElementById('myDiv02').style.top) - 10
+    }
+    if (event.key == 'J'){
+        document.getElementById('myDiv02').style.left = parseInt(document.getElementById('myDiv02').style.left) - 10
+    }
+    if (event.key == 'K'){
+        document.getElementById('myDiv02').style.top = parseInt(document.getElementById('myDiv02').style.top) + 10
+    }
+    if (event.key == 'L'){
+        document.getElementById('myDiv02').style.left = parseInt(document.getElementById('myDiv02').style.left) + 10
+    }
+    if (event.key == 'w' & 'i'){
+        document.getElementById('myDiv01').style.top = parseInt(document.getElementById('myDiv01').style.top) - 10
+        document.getElementById('myDiv02').style.top = parseInt(document.getElementById('myDiv02').style.top) - 10
+    }
+    if (event.key == 's' & 'k'){
+        document.getElementById('myDiv01').style.top = parseInt(document.getElementById('myDiv01').style.top) + 10
+        document.getElementById('myDiv02').style.top = parseInt(document.getElementById('myDiv02').style.top) + 10
+    }
+    if (event.key == 'd' & 'l'){
+        document.getElementById('myDiv01').style.left = parseInt(document.getElementById('myDiv01').style.left) + 10
+        document.getElementById('myDiv02').style.left = parseInt(document.getElementById('myDiv02').style.left) + 10
+    }
+    if (event.key == 'a' & 'j'){
+        document.getElementById('myDiv01').style.left = parseInt(document.getElementById('myDiv01').style.left) - 10
+        document.getElementById('myDiv02').style.left = parseInt(document.getElementById('myDiv02').style.left) - 10
+   }
+
+}">
+<div>
+<div align=left>
+<p><img src="https://github.com/mariofish/fischer-coding-2019/blob/master/public/assets/racetrack.png?raw=true" alt="" width="9" height="131" />
+<img style="float: right;" src="https://github.com/mariofish/fischer-coding-2019/blob/master/public/assets/racetrack.png?raw=true" alt="" width="9" height="131" /></p>
+</b></div>
