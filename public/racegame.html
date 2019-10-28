@@ -21,17 +21,49 @@
           }
 </style>
 </head>
-</div>
-<h1 align=center>Racing game</h1>
-<div align=center>WASD to move</div>
+<div align=center><img src="https://github.com/mariofish/fischer-coding-2019/blob/master/public/assets/board.png?raw=true" alt="" width="256" height="128" /></div>
+
+<h1 align=center>Key Mashing Racing game</h1>
+<div align=center><font color="00a2e8"><b>WASD to move Blue</b></font></div>
 <div id="myDiv01" style="position:absolute; left:20; top:200; " ><b><img src="https://github.com/mariofish/fischer-coding-2019/blob/master/public/assets/blueman_1.png?raw=true" alt="Jeff" width="50" height="50"><br>
 </b></div>
 <div id="myDiv02" style="position:absolute; left:20; top:250; " ><b><img src="https://github.com/mariofish/fischer-coding-2019/blob/master/public/assets/orangeman_1.png?raw=true" alt="Ron" width="50" height="50"><br>
 </b></div>
-<div align=center>This is Orange
-<div align=center>IJKL to move
+<div align=center><font color="ff7f27"><b>IJKL to move Orange</b></font></div>
 <!-- Jeff movement -->
+<head>
+<script>
+   let myInterval
+function myIsOnScreen(){
+    if (parseInt(document.getElementById('myDiv01').style.left) > 1080) {
+        document.getElementById('myDiv01').style.left = '7px'
+    }
+    if (parseInt(document.getElementById('myDiv01').style.top) > 1080) {
+        document.getElementById('myDiv01').style.top = '7px'
+    }
+     if (parseInt(document.getElementById('myDiv01').style.left) < 10) {
+        document.getElementById('myDiv01').style.left = '7px'
+    }
+      if (parseInt(document.getElementById('myDiv01').style.top) < 10) {
+        document.getElementById('myDiv01').style.top = '7px'
+      }
+    if (parseInt(document.getElementById('myDiv02').style.left) > 1080) {
+        document.getElementById('myDiv02').style.left = '7px'
+    }
+    if (parseInt(document.getElementById('myDiv02').style.top) > 1080) {
+        document.getElementById('myDiv02').style.top = '7px'
+    }
+     if (parseInt(document.getElementById('myDiv02').style.left) < 10) {
+        document.getElementById('myDiv02').style.left = '7px'
+    }
+      if (parseInt(document.getElementById('myDiv02').style.top) < 10) {
+        document.getElementById('myDiv02').style.top = '7px'
+    }
+}
+</script>
+
 <body onkeydown="{
+    myIsOnScreen()
     if (event.key == 'w'){
         document.getElementById('myDiv01').style.top = parseInt(document.getElementById('myDiv01').style.top) - 10
     }
@@ -87,7 +119,7 @@
     }
     if (event.key == 'w' & 'i'){
         document.getElementById('myDiv01').style.top = parseInt(document.getElementById('myDiv01').style.top) - 10
-        document.getElementById('myDiv02').style.top = parseInt(document.getElementById('myDiv02').style.top) - 10
+          document.getElementById('myDiv02').style.top = parseInt(document.getElementById('myDiv02').style.top) - 10
     }
     if (event.key == 's' & 'k'){
         document.getElementById('myDiv01').style.top = parseInt(document.getElementById('myDiv01').style.top) + 10
