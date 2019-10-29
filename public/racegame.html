@@ -20,16 +20,82 @@
 			  background-color: #e1e4ea;
           }
 </style>
-</head>
-<div align=center><img src="https://github.com/mariofish/fischer-coding-2019/blob/master/public/assets/board.png?raw=true" alt="" width="256" height="128" /></div>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
 
-<h1 align=center>Key Mashing Racing game</h1>
-<div align=center><font color="00a2e8"><b>WASD to move Blue</b></font></div>
-<div id="myDiv01" style="position:absolute; left:20; top:200; " ><b><img src="https://github.com/mariofish/fischer-coding-2019/blob/master/public/assets/blueman_1.png?raw=true" alt="Jeff" width="50" height="50"><br>
+.bottom-centered {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+.top-centered {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+.top-centered {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+.bottom-centered {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <img src="https://github.com/mariofish/fischer-coding-2019/blob/master/public/assets/board.png?raw=true" alt="Snow" width="300" height="160">
+  <div class="bottom-centered"><font color="00a2e8"><b>WASD to move Blue</b></font><br> <font color="ff7f27"><b>IJKL to move Orange</b></font></div>
+  <div class="top-centered"><br><b>Key Mashing Racing Game</b></div>
+  <div class="centered">
+
+Blue:<div id="myScoreBlue">0</div>
+Orange:<div id="myScoreOrange">0</div>
+</div>
+</div>
+<input type= text id="myTextBlue" value="0">
+
+<input type=button value=run onClick="{
+let myTempBlue = document.getElementById('myTextBlue').value
+
+document.getElementById('myScoreBlue').innerHTML = myTempBlue
+}">
+<input type= text id="myTextOrange" value="0">
+
+<input type=button value=run onClick="{
+let myTempOrange = document.getElementById('myTextOrange').value
+
+document.getElementById('myScoreOrange').innerHTML = myTempOrange
+}">
+</body>
+</html>
+</head>
+
+<div id="myDiv01" style="position:absolute; left:20; top:250; " ><b><img src="https://github.com/mariofish/fischer-coding-2019/blob/master/public/assets/blueman_1.png?raw=true" alt="Blue" width="50" height="50"><br>
 </b></div>
-<div id="myDiv02" style="position:absolute; left:20; top:250; " ><b><img src="https://github.com/mariofish/fischer-coding-2019/blob/master/public/assets/orangeman_1.png?raw=true" alt="Ron" width="50" height="50"><br>
+<div id="myDiv02" style="position:absolute; left:20; top:300; " ><b><img src="https://github.com/mariofish/fischer-coding-2019/blob/master/public/assets/orangeman_1.png?raw=true" alt="Orange" width="50" height="50"><br>
 </b></div>
-<div align=center><font color="ff7f27"><b>IJKL to move Orange</b></font></div>
+
 <!-- Jeff movement -->
 <head>
 <script>
@@ -64,6 +130,7 @@ function myIsOnScreen(){
 
 <body onkeydown="{
     myIsOnScreen()
+
     if (event.key == 'w'){
         document.getElementById('myDiv01').style.top = parseInt(document.getElementById('myDiv01').style.top) - 10
     }
