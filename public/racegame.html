@@ -91,9 +91,9 @@ document.getElementById('myScoreOrange').innerHTML = myTempOrange
 </html>
 </head>
 
-<div id="myDiv01" style="position:absolute; left:20; top:250; " ><b><img src="https://github.com/mariofish/fischer-coding-2019/blob/master/public/assets/blueman_1.png?raw=true" alt="Blue" width="50" height="50"><br>
+<div id="myDiv01" style="position:absolute; left:20; top:250; visibility:visible;  " ><b><img src="https://github.com/mariofish/fischer-coding-2019/blob/master/public/assets/blueman_1.png?raw=true" alt="Blue" width="50" height="50"><br>
 </b></div>
-<div id="myDiv02" style="position:absolute; left:20; top:300; " ><b><img src="https://github.com/mariofish/fischer-coding-2019/blob/master/public/assets/orangeman_1.png?raw=true" alt="Orange" width="50" height="50"><br>
+<div id="myDiv02" style="position:absolute; left:20; top:300;  visibility:visible; " ><b><img src="https://github.com/mariofish/fischer-coding-2019/blob/master/public/assets/orangeman_1.png?raw=true" alt="Orange" width="50" height="50"><br>
 </b></div>
 
 <!-- Jeff movement -->
@@ -164,12 +164,17 @@ function myIsOnScreen(){
     }
     if (event.key == 'j'){
         document.getElementById('myDiv02').style.left = parseInt(document.getElementById('myDiv02').style.left) - 10
+          document.getElementById('myDiv01').style.visibility='visible'
+        document.getElementById('myDiv02').style.visibility='hidden'
+
     }
     if (event.key == 'k'){
         document.getElementById('myDiv02').style.top = parseInt(document.getElementById('myDiv02').style.top) + 10
     }
     if (event.key == 'l'){
         document.getElementById('myDiv02').style.left = parseInt(document.getElementById('myDiv02').style.left) + 10
+        document.getElementById('myDiv01').style.visibility='hidden'
+        document.getElementById('myDiv02').style.visibility='visible'
     }
     <!-- capitals -->
     if (event.key == 'I'){
