@@ -12,7 +12,7 @@ Its a mystery what this is actually supposed to do<br>
 };
     let myPrintout='myObjArray = '+JSON.stringify(myObjArray,null,3)
     document.getElementById('myTextArea01').value = myPrintout
-    document.getElementById('myDiv01').innerHTML = 'Nothing of intrest here'
+    document.getElementById('myDiv01').innerHTML = 'Object Array'
     document.getElementById('myDiv02').innerHTML = 'Mr/Mrs '+ myObjArray.lastname+ '`s first name is '+myObjArray.firstname
     document.getElementById('myDiv03').innerHTML = myObjArray.firstname+ ' has '+myObjArray.diseases[0]
     document.getElementById('myDiv04').innerHTML = myObjArray.firstname+ ' has the '+myObjArray.diseases[1]
@@ -23,12 +23,20 @@ Its a mystery what this is actually supposed to do<br>
     'bananas',
     'cream',
     'tortellini',
-    'apples'
+    'apples',
+    {name:'garlic', type:'food', edible:'not for vampires'}
     ];
 
-    let myPrintout='myArrayObj = '+JSON.stringify(myArrayObj,null,3)
+    let myPrintout='myArrayObject = '+JSON.stringify(myArrayObj,null,3)
     document.getElementById('myTextArea01').value = myPrintout
-    document.getElementById('myDiv01').innerHTML = 'Nothing of intrest here'
+    document.getElementById('myDiv01').innerHTML = 'Array Object'
+    document.getElementById('myDiv02').innerHTML = 'I like to eat ' + myArrayObj[0] + '.'
+    document.getElementById('myDiv03').innerHTML =  myArrayObj[1] + ' is what I put in my coffee.'
+    document.getElementById('myDiv04').innerHTML =  myArrayObj[2] + ' is delicious.'
+    document.getElementById('myDiv05').innerHTML =  'I`ll eat ' + myArrayObj[4].name + ' any day but its ' + myArrayObj[4].edible + ' because they will die.'
+
+    document.getElementById('myTextArea01').value = myPrintout
+
 }">
 
 <div id="myDiv01">...</div>
