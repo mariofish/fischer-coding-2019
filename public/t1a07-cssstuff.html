@@ -1,6 +1,20 @@
 </div>
 <head>
 <style>
+
+h1 {
+  border-style: outset;
+  border-width: 7px;
+  border-color: coral;
+}
+
+ {
+  border-style: outset;
+  border-width: 7px;
+  border-color: coral;
+}
+</style>
+<style>
           body {
 		      transition: filter 0.7s, background-color 0.7s, background-image 0.7s;
 			  background:white url(https://github.com/mariofish/sites/blob/master/mods/niftyblocks/background.png?raw=true)
@@ -9,7 +23,7 @@
 			  transition: filter 0.7s;
 		  }
           * {
-		      font-family: Arial, Helvetica, sans-serif;
+		      font-family: cursive, sans-serif;
 		  }
           #main {
               margin: auto;
@@ -25,77 +39,73 @@
 <div id="main">
 <h1 align=center> CSS by Fischer</h1>
 
-<div align=center; id="myDiv01">Fischer</div>
+<div align=center; id="myDivlad">Fischer</div>
 
 Links
 <input type=button value=clickme style="background-color:blue; color:yellow; "
 onclick="{
     alert('It works')
 }">
+<br>
+<!-- Colour Change -->
+<h2><small> <font color="#FF0000">C</font><font color="#FF8000">o</font><font color="#FFE000">l</font><font color="#46FF00">o</font><font color="#0068FF">u</font><font color="#6800FF">r</font> Changer</small></h2>
 
-<p>Regular paragraph</p>
-<p class="ex">This is a paragraph with class="ex". This text is blue.</p>
+<select id="myText02" size=1 onChange="{
+    let myTemp = document.getElementById('myText02').value
+    document.getElementById('myDiv02').style.color = myTemp
+}">
+<option value="red">red
+<option value="orange">orange
+<option value="gold">yellow
+<option value="green">green
+<option value="blue">blue
+<option value="purple">purple
+<option value="brown">brown
+<option value="black">black
+<option value="grey">grey
+<option value="white">white
 
-<html>
-<head>
-<style>
-p.test1 {
-  writing-mode: horizontal-tb;
-}
+</select>
+<span id="myDiv02" style="color:red" >
+This is a colour</span><br>
+This is some text with a different font<br>
+<a href="https://en.wikipedia.org/wiki/Mars">Mars Wiki</a><br>
+<a href="https://en.wikipedia.org/wiki/Moon">Moon Wiki</a>
+<div id="myDiv01" style="position:absolute; left:250; top:200; " ><b><img src="https://github.com/mariofish/fischer-coding-2019/blob/master/public/assets/jeff.png?raw=true" alt="Jeff" width="50" height="50"><br>
+</b></div>
+<div align=center><input type=button value="↖" style="color:white; background-color:red; " onclick="{ document.getElementById('myDiv01').style.left = parseInt(document.getElementById('myDiv01').style.left) - 5
+document.getElementById('myDiv01').style.top = parseInt(document.getElementById('myDiv01').style.top) - 5
+}">
+<input type=button value="↑" style="color:white; background-color:red " onclick="{ document.getElementById('myDiv01').style.top = parseInt(document.getElementById('myDiv01').style.top) - 5
+}">
+<input type=button value="↗" style="color:white; background-color:red; " onclick="{ document.getElementById('myDiv01').style.left = parseInt(document.getElementById('myDiv01').style.left) + 5
+document.getElementById('myDiv01').style.top = parseInt(document.getElementById('myDiv01').style.top) - 5
+}"></div>
+<div align=center><input type=button value="←" style="color:white; background-color:red; " onclick="{ document.getElementById('myDiv01').style.left = parseInt(document.getElementById('myDiv01').style.left) - 5
+}">
+<input type=button value="→" style="color:white; background-color:red; " onclick="{ document.getElementById('myDiv01').style.left = parseInt(document.getElementById('myDiv01').style.left) + 5
+}"></div>
+<div align=center><input type=button value="↙" style="color:white; background-color:red; " onclick="{ document.getElementById('myDiv01').style.left = parseInt(document.getElementById('myDiv01').style.left) - 5
+document.getElementById('myDiv01').style.top = parseInt(document.getElementById('myDiv01').style.top) + 5
+}">
+<input type=button value="↓" style="color:white; background-color:red " onclick="{ document.getElementById('myDiv01').style.top = parseInt(document.getElementById('myDiv01').style.top) + 5
+}">
+<input type=button value="↘" style="color:white; background-color:red; " onclick="{ document.getElementById('myDiv01').style.left = parseInt(document.getElementById('myDiv01').style.left) + 5
+document.getElementById('myDiv01').style.top = parseInt(document.getElementById('myDiv01').style.top) + 5
+}"></div>
+<br>
 
-span.test2 {
-  writing-mode: vertical-rl;
-}
-</style>
-</head>
-<body>
+<h2><i> Write down your thoughts here:</i></h2>
 
-<p class="test1">Some text with default writing-mode.</p>
+<form name="commentform" action="#" method="post" target="_blank" id="1321">
+    <textarea name="forcom" cols="40" rows="5" form="1321" maxlength="188">
 
-<p>This is text in <span class="test2">vertical</span> writing-mode.</p>
+    </textarea>
+<br>
 
-</body>
-</html>
-
-
-<h2>You should try:</h2>
-
-<head>
-<style>
-ul {
-  list-style-image: url('sqpurple.gif');
-}
-</style>
-</head>
-<body>
-<p>The following beverages:</p>
-
-<ul>
-  <li>Ice Tea</li>
-  <li>Coca Cola</li>
-  <li>Peach Gingerale</li>
-</ul>
-
-<p>These awesome games:</p>
-
-<ul>
-  <li>Minecraft</li>
-  <li>Rimworld</li>
-  <li>Pong</li>
-</ul>
-
-<p>To visit these countries:</p>
-
-<ul>
-  <li>Mexico</li>
-  <li>Italy</li>
-  <li>France</li>
-</ul>
-
-</body>
-</html>
- 
-</div>
-</div>
+    <input type="submit" value="Submit">
+    <input type="reset" value="Clear">
+<br>
+<div id="myDiv04" >Now submit your thoughts to our Life Gurus™ which are totally not just chinese companies.</div>
 </body>
 </html>

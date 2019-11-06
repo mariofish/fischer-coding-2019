@@ -22,56 +22,96 @@
 </head>
 </div>
 <h1 align=center>Calculator by Fischer</h1>
-<input id="myDiv01" type="text">
+<input id="myDiv01" type="text"><br>
 <input type=button value="1" id="myText01" onclick="{
-let myTemp = document.getElementById('myDiv01').value =
+let myTemp = document.getElementById('myDiv01').value +=
    document.getElementById('myDiv01').innerHTML = ('1')
-   document.getElementbyId('myText01').value = document.getElementById('myText02').value + ' '
+   document.getElementbyId('myText01').value += document.getElementById('myText01').value + ' '
 }">
-<input type=button value="2" id="myText02" onclick="{
-let myTemp = document.getElementById('myDiv01').value =
-   document.getElementById('myDiv01').innerHTML = ('2')
-   document.getElementbyId('myText02').value = document.getElementById('myText01').value + ' '
+<input type=button value="2" id="myText01" onclick="{
+let myTemp = document.getElementById('myDiv01').value +=
+   document.getElementById('myDiv01').innerHTML += ('2')
+   document.getElementbyId('myText01').value += document.getElementById('myText01').value + ' '
 }">
-<input type=button value="3" id="myText02" onclick="{
-let myTemp = document.getElementById('myDiv01').value =
-   document.getElementById('myDiv01').innerHTML = ('3')
-   document.getElementbyId('myText02').value = document.getElementById('myText01').value + ' '
+<input type=button value="3" id="myText01" onclick="{
+let myTemp = document.getElementById('myDiv01').value +=
+   document.getElementById('myDiv01').innerHTML += ('3')
+   document.getElementbyId('myText01').value += document.getElementById('myText01').value + ' '
+}"><br>
+<input type=button value="4" id="myText01" onclick="{
+let myTemp = document.getElementById('myDiv01').value +=
+   document.getElementById('myDiv01').innerHTML += ('4')
+   document.getElementbyId('myText01').value += document.getElementById('myText01').value + ' '
 }">
-<input type=button value="4" id="myText02" onclick="{
-let myTemp = document.getElementById('myDiv01').value =
-   document.getElementById('myDiv01').innerHTML = ('4')
-   document.getElementbyId('myText02').value = document.getElementById('myText01').value + ' '
+<input type=button value="5" id="myText01" onclick="{
+let myTemp = document.getElementById('myDiv01').value +=
+   document.getElementById('myDiv01').innerHTML += ('5')
+   document.getElementbyId('myText01').value += document.getElementById('myText01').value + ' '
 }">
-<input type=button value="5" id="myText02" onclick="{
-let myTemp = document.getElementById('myDiv01').value =
-   document.getElementById('myDiv01').innerHTML = ('5')
-   document.getElementbyId('myText02').value = document.getElementById('myText01').value + ' '
-}">
-<input type=button value="6" id="myText02" onclick="{
-let myTemp = document.getElementById('myDiv01').value =
-   document.getElementById('myDiv01').innerHTML = ('6')
-   document.getElementbyId('myText02').value = document.getElementById('myText01').value + ' '
-}">
+<input type=button value="6" id="myText01" onclick="{
+let myTemp = document.getElementById('myDiv01').value +=
+   document.getElementById('myDiv01').innerHTML += ('6')
+   document.getElementbyId('myText01').value += document.getElementById('myText01').value + ' '
+}"><br>
 <input type=button value="7" id="myText02" onclick="{
-let myTemp = document.getElementById('myDiv01').value =
-   document.getElementById('myDiv01').innerHTML = ('7')
-   document.getElementbyId('myText02').value = document.getElementById('myText01').value + ' '
+let myTemp = document.getElementById('myDiv01').value +=
+   document.getElementById('myDiv01').innerHTML += ('7')
+   document.getElementbyId('myText01').value += document.getElementById('myText01').value + ' '
 }">
-<input type=button value="8" id="myText02" onclick="{
-let myTemp = document.getElementById('myDiv01').value =
-   document.getElementById('myDiv01').innerHTML = ('8')
-   document.getElementbyId('myText02').value = document.getElementById('myText01').value + ' '
+<input type=button value="8" id="myText01" onclick="{
+let myTemp = document.getElementById('myDiv01').value +=
+   document.getElementById('myDiv01').innerHTML += ('8')
+   document.getElementbyId('myText01').value += document.getElementById('myText01').value + ' '
 }">
-<input type=button value="9" id="myText02" onclick="{
-let myTemp = document.getElementById('myDiv01').value =
-   document.getElementById('myDiv01').innerHTML = ('9')
-   document.getElementbyId('myText02').value = document.getElementById('myText01').value + ' '
+<input type=button value="9" id="myText01" onclick="{
+let myTemp = document.getElementById('myDiv01').value +=
+   document.getElementById('myDiv01').innerHTML += ('9')
+   document.getElementbyId('myText01').value += document.getElementById('myText01').value + ' '
+}"><br>
+<input type=button value="0" id="myText01" onclick="{
+let myTemp = document.getElementById('myDiv01').value +=
+   document.getElementById('myDiv01').innerHTML += ('0')
+   document.getElementbyId('myText01').value += document.getElementById('myText01').value + ' '
 }">
-<input type=button value="0" id="myText02" onclick="{
-let myTemp = document.getElementById('myDiv01').value =
-   document.getElementById('myDiv01').innerHTML = ('0')
-   document.getElementbyId('myText02').value = document.getElementById('myText01').value + ' '
+<input type=button value="." id="myText01" onclick="{
+let myTemp = document.getElementById('myDiv01').value +=
+   document.getElementById('myDiv01').innerHTML += ('.')<br>
+   document.getElementbyId('myText01').value += document.getElementById('myText01').value + ' '
 }">
+<input type=button value="=" id="myText01" onclick="{
+let myTemp = document.getElementById('myDiv01').value +=
+   document.getElementById('myDiv01').innerHTML += ('=')<br>
+   document.getElementbyId('myText01').value += document.getElementById('myText01').value + ' '
+}">
+<input type=button value="/" id="myText01" onclick="{
+let myTemp = document.getElementById('myDiv01').value +=
+   document.getElementById('myDiv01').innerHTML += ('/')<br>
+   document.getElementbyId('myText01').value += document.getElementById('myText01').value + ' '
+}">
+<input type=button value="%" id="myText01" onclick="{
+let myTemp = document.getElementById('myDiv01').value +=
+   document.getElementById('myDiv01').innerHTML += ('%')<br>
+   document.getElementbyId('myText01').value += document.getElementById('myText01').value + ' '
+}">
+<input type=button value="+" id="myText01" onclick="{
+let myTemp = document.getElementById('myDiv01').value +=
+   document.getElementById('myDiv01').innerHTML += ('+')<br>
+   document.getElementbyId('myText01').value += document.getElementById('myText01').value + ' '
+}">
+<input type=button value="-" id="myText01" onclick="{
+let myTemp = document.getElementById('myDiv01').value +=
+   document.getElementById('myDiv01').innerHTML += ('-')<br>
+   document.getElementbyId('myText01').value += document.getElementById('myText01').value + ' '
+}">
+<input type=button value="x" id="myText01" onclick="{
+let myTemp = document.getElementById('myDiv01').value +=
+   document.getElementById('myDiv01').innerHTML += ('x')<br>
+   document.getElementbyId('myText01').value += document.getElementById('myText01').value + ' '
+   }">
+<input type=button value="clear" id="myText01" onclick="{
+let myTemp = document.getElementById('myDiv01').value +=
+   document.getElementById('myDiv01').innerHTML += ('clear')<br>
+   document.getElementbyId('myText01').value += document.getElementById('myText01').value + ' '
+}"><br>
 
 <textarea id="myTextArea01" rows=16 cols=40 noWrap>...</textarea>
