@@ -22,96 +22,73 @@
 </head>
 </div>
 <h1 align=center>Calculator by Fischer</h1>
-<input id="myDiv01" type="text"><br>
-<input type=button value="1" id="myText01" onclick="{
-let myTemp = document.getElementById('myDiv01').value +=
-   document.getElementById('myDiv01').innerHTML = ('1')
-   document.getElementbyId('myText01').value += document.getElementById('myText01').value + ' '
+<input id="myText01"  type=text value="3"  >
+<select id="myText02" size=1 onChange="{
+    let myTemp = document.getElementById('myText01').value
+    document.getElementById('myDiv01').style.borderStyle = myTemp
 }">
-<input type=button value="2" id="myText01" onclick="{
-let myTemp = document.getElementById('myDiv01').value +=
-   document.getElementById('myDiv01').innerHTML += ('2')
-   document.getElementbyId('myText01').value += document.getElementById('myText01').value + ' '
-}">
-<input type=button value="3" id="myText01" onclick="{
-let myTemp = document.getElementById('myDiv01').value +=
-   document.getElementById('myDiv01').innerHTML += ('3')
-   document.getElementbyId('myText01').value += document.getElementById('myText01').value + ' '
-}"><br>
-<input type=button value="4" id="myText01" onclick="{
-let myTemp = document.getElementById('myDiv01').value +=
-   document.getElementById('myDiv01').innerHTML += ('4')
-   document.getElementbyId('myText01').value += document.getElementById('myText01').value + ' '
-}">
-<input type=button value="5" id="myText01" onclick="{
-let myTemp = document.getElementById('myDiv01').value +=
-   document.getElementById('myDiv01').innerHTML += ('5')
-   document.getElementbyId('myText01').value += document.getElementById('myText01').value + ' '
-}">
-<input type=button value="6" id="myText01" onclick="{
-let myTemp = document.getElementById('myDiv01').value +=
-   document.getElementById('myDiv01').innerHTML += ('6')
-   document.getElementbyId('myText01').value += document.getElementById('myText01').value + ' '
-}"><br>
-<input type=button value="7" id="myText02" onclick="{
-let myTemp = document.getElementById('myDiv01').value +=
-   document.getElementById('myDiv01').innerHTML += ('7')
-   document.getElementbyId('myText01').value += document.getElementById('myText01').value + ' '
-}">
-<input type=button value="8" id="myText01" onclick="{
-let myTemp = document.getElementById('myDiv01').value +=
-   document.getElementById('myDiv01').innerHTML += ('8')
-   document.getElementbyId('myText01').value += document.getElementById('myText01').value + ' '
-}">
-<input type=button value="9" id="myText01" onclick="{
-let myTemp = document.getElementById('myDiv01').value +=
-   document.getElementById('myDiv01').innerHTML += ('9')
-   document.getElementbyId('myText01').value += document.getElementById('myText01').value + ' '
-}"><br>
-<input type=button value="0" id="myText01" onclick="{
-let myTemp = document.getElementById('myDiv01').value +=
-   document.getElementById('myDiv01').innerHTML += ('0')
-   document.getElementbyId('myText01').value += document.getElementById('myText01').value + ' '
-}">
-<input type=button value="." id="myText01" onclick="{
-let myTemp = document.getElementById('myDiv01').value +=
-   document.getElementById('myDiv01').innerHTML += ('.')<br>
-   document.getElementbyId('myText01').value += document.getElementById('myText01').value + ' '
-}">
-<input type=button value="=" id="myText01" onclick="{
-let myTemp = document.getElementById('myDiv01').value +=
-   document.getElementById('myDiv01').innerHTML += ('=')<br>
-   document.getElementbyId('myText01').value += document.getElementById('myText01').value + ' '
-}">
-<input type=button value="/" id="myText01" onclick="{
-let myTemp = document.getElementById('myDiv01').value +=
-   document.getElementById('myDiv01').innerHTML += ('/')<br>
-   document.getElementbyId('myText01').value += document.getElementById('myText01').value + ' '
-}">
-<input type=button value="%" id="myText01" onclick="{
-let myTemp = document.getElementById('myDiv01').value +=
-   document.getElementById('myDiv01').innerHTML += ('%')<br>
-   document.getElementbyId('myText01').value += document.getElementById('myText01').value + ' '
-}">
-<input type=button value="+" id="myText01" onclick="{
-let myTemp = document.getElementById('myDiv01').value +=
-   document.getElementById('myDiv01').innerHTML += ('+')<br>
-   document.getElementbyId('myText01').value += document.getElementById('myText01').value + ' '
-}">
-<input type=button value="-" id="myText01" onclick="{
-let myTemp = document.getElementById('myDiv01').value +=
-   document.getElementById('myDiv01').innerHTML += ('-')<br>
-   document.getElementbyId('myText01').value += document.getElementById('myText01').value + ' '
-}">
-<input type=button value="x" id="myText01" onclick="{
-let myTemp = document.getElementById('myDiv01').value +=
-   document.getElementById('myDiv01').innerHTML += ('x')<br>
-   document.getElementbyId('myText01').value += document.getElementById('myText01').value + ' '
-   }">
-<input type=button value="clear" id="myText01" onclick="{
-let myTemp = document.getElementById('myDiv01').value +=
-   document.getElementById('myDiv01').innerHTML += ('clear')<br>
-   document.getElementbyId('myText01').value += document.getElementById('myText01').value + ' '
-}"><br>
 
-<textarea id="myTextArea01" rows=16 cols=40 noWrap>...</textarea>
+<option value="+">+
+<option value="-">-
+<option value="/">/
+<option value="inset">inset
+<option value="outset">outset
+<option value="ridge">ridge
+<option value="double">double
+<option value="none">none
+</select>
+
+<input id="myText03"  type=text value="4"  > <br>
+
+<input type=button value=" = " onClick="{
+   myNum1 = parseFloat(document.getElementById('myText01').value)
+   mySign = document.getElementById('myText02').value
+   myNum2 =parseFloat(document.getElementById('myText03').value)
+
+   myTotal = 0
+  if (mySign == '+'){
+    myTotal = myNum1 + myNum2
+  }
+  else if (mySign == '-'){
+    myTotal = myNum1 - myNum2
+  }
+  else if (mySign == 'x'){
+    myTotal = myNum1 * myNum2
+  }
+  else if (mySign == '/'){
+    myTotal = myNum1 / myNum2
+  }
+  else if (mySign == 'power'){
+    myTotal = Math.pow(myNum1, myNum2);
+  }
+  else if (mySign == 'square'){
+    myTotal = Math.pow(myNum1, 2);
+  }
+  else if (mySign == 'sin'){
+    myTotal = myNum1 * Math.sin(myNum2 * (Math.PI / 180));
+  }
+  else if (mySign == 'cos'){
+    myTotal = myNum1 * Math.cos(myNum2 * (Math.PI / 180));
+  }
+  else if (mySign == 'tan'){
+    myTotal = myNum1 * Math.tan(myNum2 * (Math.PI / 180));
+  }
+  else if (mySign == 'asin'){
+    myTotal = Math.asin(myNum2 / (Math.PI / 180));
+  }
+  else if (mySign == 'acos'){
+    myTotal = Math.acos(myNum2 / (Math.PI / 180));
+  }
+  else if (mySign == 'atan'){
+    myTotal = Math.atan(myNum2 / (Math.PI / 180));
+  }
+      document.getElementById('myDiv01').innerHTML =  myNum1 + ' ' +   mySign +' '+ myNum2 +'  '+ myTotal + '<br>' + document.getElementById('myDiv01').innerHTML;
+}" >
+
+<input type=button value="Clear Output" onClick="{
+      document.getElementById('myDiv01').innerHTML =  ''
+}" >
+<br>
+<p>The functions avaliable are: + - x / square power sin cos tan asin acos atan
+
+<div id="myDiv01">....<br></div>
