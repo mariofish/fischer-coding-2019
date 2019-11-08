@@ -22,73 +22,54 @@
 </head>
 </div>
 <h1 align=center>Calculator by Fischer</h1>
-<input id="myText01"  type=text value="3"  >
+<table border=1>
+<tr><td>
+<input id="myText01"  type=text value="1"  >
 <select id="myText02" size=1 onChange="{
     let myTemp = document.getElementById('myText01').value
     document.getElementById('myDiv01').style.borderStyle = myTemp
 }">
-
 <option value="+">+
-<option value="-">-
-<option value="/">/
-<option value="inset">inset
-<option value="outset">outset
-<option value="ridge">ridge
-<option value="double">double
-<option value="none">none
+<option value="−">−
+<option value="×">×
+<option value="÷">÷
+<option value="%">%
 </select>
 
-<input id="myText03"  type=text value="4"  > <br>
+<input id="myText03"  type=text value="2"  >
 
-<input type=button value=" = " onClick="{
+<input type=button value="=" onClick="{
    myNum1 = parseFloat(document.getElementById('myText01').value)
-   mySign = document.getElementById('myText02').value
    myNum2 =parseFloat(document.getElementById('myText03').value)
+   mySign = document.getElementById('myText02').value
 
    myTotal = 0
   if (mySign == '+'){
     myTotal = myNum1 + myNum2
   }
-  else if (mySign == '-'){
+  else if (mySign == '−'){
     myTotal = myNum1 - myNum2
   }
-  else if (mySign == 'x'){
+  else if (mySign == '×'){
     myTotal = myNum1 * myNum2
   }
-  else if (mySign == '/'){
+  else if (mySign == '÷'){
     myTotal = myNum1 / myNum2
   }
-  else if (mySign == 'power'){
-    myTotal = Math.pow(myNum1, myNum2);
+  else if (mySign == '%'){
+    myTotal = myNum1 % myNum2
   }
-  else if (mySign == 'square'){
-    myTotal = Math.pow(myNum1, 2);
-  }
-  else if (mySign == 'sin'){
-    myTotal = myNum1 * Math.sin(myNum2 * (Math.PI / 180));
-  }
-  else if (mySign == 'cos'){
-    myTotal = myNum1 * Math.cos(myNum2 * (Math.PI / 180));
-  }
-  else if (mySign == 'tan'){
-    myTotal = myNum1 * Math.tan(myNum2 * (Math.PI / 180));
-  }
-  else if (mySign == 'asin'){
-    myTotal = Math.asin(myNum2 / (Math.PI / 180));
-  }
-  else if (mySign == 'acos'){
-    myTotal = Math.acos(myNum2 / (Math.PI / 180));
-  }
-  else if (mySign == 'atan'){
-    myTotal = Math.atan(myNum2 / (Math.PI / 180));
-  }
-      document.getElementById('myDiv01').innerHTML =  myNum1 + ' ' +   mySign +' '+ myNum2 +'  '+ myTotal + '<br>' + document.getElementById('myDiv01').innerHTML;
+      document.getElementById('myDiv01').innerHTML =  myNum1 + ' ' +   mySign +' '+ myNum2 +' = '+ myTotal + '<br>' + document.getElementById('myDiv01').innerHTML;
 }" >
+</td></tr></table>
 
-<input type=button value="Clear Output" onClick="{
+<p>The avaliable functions are: + - x ÷
+<h2>Log:</h2>
+<table border=1>
+<tr><td>
+<input type=button value="Clear Log" onClick="{
       document.getElementById('myDiv01').innerHTML =  ''
 }" >
-<br>
-<p>The functions avaliable are: + - x / square power sin cos tan asin acos atan
-
-<div id="myDiv01">....<br></div>
+<div id="myDiv01">...<br></div>
+</td></tr>
+</table>
