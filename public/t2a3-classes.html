@@ -1,0 +1,104 @@
+<div>
+<head>
+<style>
+          body {
+		      transition: filter 0.7s, background-color 0.7s, background-image 0.7s;
+		}
+		  iframe {
+			  transition: filter 0.7s;
+		  }
+          * {
+		      font-family: Arial, Helvetica, sans-serif;
+		  }
+          #main {
+              margin: auto;
+              top: 100%;
+              width: 50.000em;
+              border-radius: 12px;
+              transition: filter 0.7s, background-image 0.7s;
+			  background-color: #e1e4ea;
+          }
+</style>
+</head>
+</div>
+
+<h2 align=center>Javascript Classes by Fischer</h2>
+<input type=text id="myNameInput" placeholder="Enter an animal name here"
+value=""><br><br>
+
+<input id="myButton01" type="button" value="Make and Show the class myAnimal"
+onclick="{
+ class myAnimal {
+    constructor(passName, passAge) {
+       this.myName = passName;
+       this.myAge = passAge;
+    }
+    myShow(){
+       document.getElementById('myDiv01').innerHTML = 'Hello '+ this.myName + 
+    '. You are ' + this.myAge + ' years old<br>'
+        }
+     }  // end class myAnimal
+       myDog = new myAnimal('Snickers', 5)
+       myDog.myShow()
+    }"><br><br>
+    <div id='myDiv01'>...</div><br>
+
+    <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+
+    <input type="button" value="Use ResponsiveCode" onclick="{
+        responsiveVoice.speak('meow')
+    }"><br>
+
+    <input  type="button" value="Mexican" onclick="{
+        responsiveVoice.speak('Me no speak ingles.', 'Spanish Male', {pitch: 1.1, rate:.9, volume : 50})
+    }"><br>
+    <input  type="button" value="Englishmun" onclick="{
+        responsiveVoice.speak('Oi Oi govna! I dont like to watch football on the tellie cause its rubbish!', 'UK English Male', {pitch: 1.1, rate:1, volume : 50})
+    }"><br>
+    <input  type="button" value="Australianmun" onclick="{
+        responsiveVoice.speak('Ello mate! I like ta wrestle with crocadiles and giant spiders!', 'Australian Male', {pitch: .5, rate:1, volume : 50})
+        
+    }"><br>
+    <input  type="button" value="Putin" onclick="{
+        responsiveVoice.speak('Cyka blyat i like vodka and communism', 'Russian Male', {pitch: 1.1, rate:0.5, volume : 50})
+    
+    }"><br>
+    <input  type="button" value="Mao" onclick="{
+        responsiveVoice.speak('Herro i like cheap prastic and communism', 'Chinese Male', {pitch: 1.1, rate:1, volume : 50})
+        
+    }"><br>
+    <input  type="button" value="Mario" onclick="{
+        responsiveVoice.speak('Mama mia! thats a spicy meat-a ball!', 'Italian Male', {pitch: 1.2, rate: .9, volume : 50})
+    }"><br>
+    <input  type="button" value="Luigi" onclick="{
+        responsiveVoice.speak('Mama mia! thats a spicy meat ball!', 'Italian Male', {pitch: 1, rate: 1, volume : 50})
+           
+    }"><br><br>
+
+<input id="myButton02" type="button" value="Extend a Class" onclick="{
+class myAnimal {
+    constructor(passName, passAge, passColor, passPaw) {
+        this.myName = passName;
+        this.myAge = passAge; 
+        this.myColor = passColor;
+        this.myPaw = passPaw;
+    }
+    myShow(){
+        document.getElementById('myDiv02').innerHTML = 'Hello '+ this.myName + '. You are ' + this.myAge + ' years old<br>'
+    }
+ }   // end class myAnimal { 
+     
+class myCat extends myAnimal {
+    
+    myShow(){
+      document.getElementById('myDiv02').innerHTML = this.myName + ' is a great cat who is ' + this.myAge + ' years old<br>' + ' He has ' + this.myColor + ' hair.' + ' He has ' + this.myPaw + ' paws.'
+      
+    }
+    
+}    // end extended class myCat
+   myPet = new myCat('Poofy', 14, 'red', 'small')
+   myPet.myShow()
+ }"><br><br>
+
+ <div id='myDiv02'>...</div><br>
+
