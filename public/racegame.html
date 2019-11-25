@@ -9,7 +9,7 @@ body {
           }
 		  iframe {
 			  transition: filter 0.7s;
-		  }
+		  } 
           #main {
               margin: auto;
               top: 100%;
@@ -68,25 +68,13 @@ body {
   <div class="top-centered"><br><b>Key Mashing Racing Game</b></div>
   <div class="centered">
 
-Blue:<div id="myScoreBlue">0</div>
-Orange:<div id="myScoreOrange">0</div>
+Blue:<div id="myScoreBlue" value= "0"><input type= text id="myTextBlue" value="0" maxlength="4" size="2" readonly style="font-family: 'Press Start 2P'; background-color: #232323; color: white; border: none;">
+</div>
+Orange:<div id="myScoreOrange" value="0"><input type= text id="myTextOrange" value="0" maxlength="4" size="2" readonly style="font-family: 'Press Start 2P'; background-color: #232323; color: white; border: none;">
 </div>
 </div>
-<input type= text id="myTextBlue" value="0">
-
-<input type=button value=run onClick="{
-let myTempBlue = document.getElementById('myTextBlue').value
-
-document.getElementById('myScoreBlue').innerHTML = myTempBlue
-}">
-<input type= text id="myTextOrange" value="0">
-
-<input type=button value=run onClick="{
-let myTempOrange = document.getElementById('myTextOrange').value
-
-document.getElementById('myScoreOrange').innerHTML = myTempOrange
-}">
-</body>
+</div> 
+</body> 
 </html>
 </head>
  
@@ -101,6 +89,7 @@ document.getElementById('myScoreOrange').innerHTML = myTempOrange
 function myIsOnScreen(){
     if (parseInt(document.getElementById('myDiv01').style.left) > 1080) {
         document.getElementById('myDiv01').style.left = '7px'
+    document.getElementById('myTextBlue').value = 1 + parseInt(document.getElementById('myTextBlue').value)
     }
     if (parseInt(document.getElementById('myDiv01').style.top) > 1080) {
         document.getElementById('myDiv01').style.top = '7px'
@@ -113,6 +102,7 @@ function myIsOnScreen(){
     }
     if (parseInt(document.getElementById('myDiv02').style.left) > 1080) {
         document.getElementById('myDiv02').style.left = '7px'
+        document.getElementById('myTextOrange').value = 1 + parseInt(document.getElementById('myTextOrange').value)
     }
     if (parseInt(document.getElementById('myDiv02').style.top) > 1080) {
         document.getElementById('myDiv02').style.top = '7px'
@@ -177,9 +167,8 @@ function myIsOnScreen(){
         document.getElementById('myDiv02').style.top = parseInt(document.getElementById('myDiv02').style.top) + 10
     }
     if (event.key == 'l'){
-        document.getElementById('myDiv02').style.left = parseInt(document.getElementById('myDiv02').style.left) + 10
-
-        }
+        document.getElementById('myDiv02').style.left = parseInt(document.getElementById('myDiv02').style.left) + 100
+    }
     if (event.key == 'i'){
         document.getElementById('myDiv02-1').style.top = parseInt(document.getElementById('myDiv02-1').style.top) - 10
     }
@@ -200,3 +189,4 @@ function myIsOnScreen(){
 <p><img src="https://github.com/mariofish/fischer-coding-2019/blob/master/public/assets/racetrack.png?raw=true" alt="" width="9" height="131" />
 <img style="float: right;" src="https://github.com/mariofish/fischer-coding-2019/blob/master/public/assets/racetrack.png?raw=true" alt="" width="9" height="131" /></p>
 </b></div>
+
