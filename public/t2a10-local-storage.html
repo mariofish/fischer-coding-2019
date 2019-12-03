@@ -1,0 +1,85 @@
+<div>
+<head>
+<style>
+          body {
+		      transition: filter 0.7s, background-color 0.7s, background-image 0.7s;
+		}
+		  iframe {
+			  transition: filter 0.7s;
+		  }
+          * {
+		      font-family: Arial, Helvetica, sans-serif;
+		  }
+          #main {
+              margin: auto;
+              top: 100%;
+              width: 50.000em;
+              border-radius: 12px;
+              transition: filter 0.7s, background-image 0.7s;
+			  background-color: #e1e4ea;
+          }
+</style>
+</head>
+</div>
+<h1 align=center> Local Storage by Fischer </h1>
+
+<body onload="{
+   myStorage = localStorage.getItem('myStoredText')           
+   if(myStorage  !=null){
+      document.getElementById('myText01').value = myStorage        
+    }          
+}">
+  
+<body onunload="{
+   localstorage.setItem('myStoredText', document.getElementById('myText01').value)             
+}">
+  <input id="myText01" type=text size=70 value="" placeholder="write here to store stuff"><br>
+  
+<input type="button" value="Store Text" onclick="{
+  localStorage.setItem('myStoredText', document.getElementById('myText01').value)                                               
+  alert(document.getElementById('myText01').value + ' \nHas been stored')
+  document.getElementById('myText01').value = ''                                               
+}">              
+              
+<input type="button" value="Retrive Text" onclick="{ 
+ document.getElementById('myText01').value = localStorage.getItem('myStoredText')            
+}">              
+
+<body onload="{
+   myStorage = localStorage.getItem('myStoredText')           
+   if(myStorage  !=null){
+      document.getElementById('myText01').value = myStorage         
+    }          
+}">
+  
+<body onunload="{
+   localstorage.setItem('myStoredText', document.getElementById('myImage01').value)             
+}">
+  <input id="myImage01" type=file size=70 value="" placeholder="write here to store stuff"><br>
+  
+<input type="button" value="Store Image" onclick="{
+  localStorage.setItem('myStoredImage', document.getElementById('myImage01').value)                                               
+  alert(document.getElementById('myImage01').value + ' \nHas been stored')
+  document.getElementById('myImage01').value = ''                                               
+}">              
+              
+<html>
+<body>
+
+<h3>A demonstration of how to access a File Upload Button</h3>
+
+<input type="file" id="myFile">
+
+<p>Click the "Try it" button to disable the file upload button.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myFile");
+  x.disabled = true;
+}
+</script>
+
+</body>
+</html>
