@@ -55,31 +55,31 @@
 <body onunload="{
    localstorage.setItem('myStoredText', document.getElementById('myImage01').value)             
 }">
-  <input id="myImage01" type=file size=70 value="" placeholder="write here to store stuff"><br>
-  
+
 <input type="button" value="Store Image" onclick="{
   localStorage.setItem('myStoredImage', document.getElementById('myImage01').value)                                               
   alert(document.getElementById('myImage01').value + ' \nHas been stored')
   document.getElementById('myImage01').value = ''                                               
-}">              
-              
+}">       
 <html>
-<body>
-
-<h3>A demonstration of how to access a File Upload Button</h3>
-
-<input type="file" id="myFile">
-
-<p>Click the "Try it" button to disable the file upload button.</p>
-
-<button onclick="myFunction()">Try it</button>
-
-<script>
-function myFunction() {
-  var x = document.getElementById("myFile");
-  x.disabled = true;
+<head>
+<script type='text/javascript'>
+function preview_image(event) 
+{
+ var reader = new FileReader();
+ reader.onload = function()
+ {
+  var output = document.getElementById('output_image');
+  output.src = reader.result;
+ }
+ reader.readAsDataURL(event.target.files[0]);
 }
 </script>
-
+</head>
+<body>
+<div id="wrapper">
+ <input type="file" accept="image/*" onchange="preview_image(event)">
+ <img id="output_image"/>
+</div>
 </body>
 </html>

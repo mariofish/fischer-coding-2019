@@ -21,32 +21,45 @@
 </style>
 </head>
 </div>
-<h1 align=center> Sort by Fischer</h1>
+<h1 align=center> Sorter</h1>
 
+<input type="button" value="Randomize" onclick="{
+myTemp = ' '
+document.getElementById('Div01').innerText = myFun()
+}">
+<input type="button" value="Sort" onclick="{
+myTemp=''
+document.getElementById('Div01').innerText = mySort()
+}">
 <script>
-   let myMax = 52       
-   let myCards = new Array(myMax)
+function getRandInteger(min, max) {
+  return Math.floor(Math.random() * (max - min) ) + min;
+}
+let myArray = []
+myArray[0] = []
+let myTemp = 0
+let x = 0
+function myFun(){
+    for(let myLoop=0;myLoop<=53;myLoop++){
+        myArray[0][myLoop] = getRandInteger(1, 52)
+        myTemp+=myArray[0][myLoop] +', '
+    }
+    return myTemp
+}
+function mySort(){
+    for (let myLoop1=0;myLoop1<=52;myLoop1++){
+        for(let myLoop2=0;myLoop2<=52;myLoop2++){
+            for(let myLoop=0;myLoop<=52;myLoop++){
+                if(myArray[0][myLoop] >= myArray[0][myLoop+1]){
+                    x= myArray[0][myLoop+1] 
+                    myArray[0][myLoop+1]= myArray[0][myLoop] 
+                    myArray[0][myLoop] = x  
+                }   
+            }
+        }
+        myTemp+=myArray[0][myLoop1] +', '
+    }
+    return myTemp
+}
 </script>
-
-<input type=button value="Set Random" onclick="{
-  for ( let myLoop = 0;   myLoop < myMax;  myLoop++){
-     myCards[myLoop] = Math.floor(Math.random()*52)
-    }
-}">
-
-<input type=button value="Show" onclick="{
-    let myTemp = ''
-    for ( let myLoop = 0;    myLoop < myMax;  myLoop++){
-        myTemp += myLoop + ' = ' + myCards[myLoop] + '<br>'
-    }
-    document.getElementById('myDiv01').innerHTML = myTemp
-}">
-
-<input type=button value="Sort" onclick="{
-    let myTemp = 0
-    for ( let myLoop = 0;   myLoop < myMax;  myLoop++){
-        myCards[myLoop] = 0 // you do this stuff
-    }
-}">
-
-<div id="myDiv01"></div>
+<div id="Div01">...</div>
