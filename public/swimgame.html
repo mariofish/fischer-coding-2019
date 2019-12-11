@@ -64,23 +64,23 @@ body {
 <body>
 <div class="container">
   <img src="https://github.com/mariofish/fischer-coding-2019/blob/master/public/assets/boardHD.png?raw=true" alt="Snow" width="300" height="160">
-  <div class="bottom-centered"><font color="00a2e8"><b>WASD to move Blue</b></font><br> <font color="ff7f27"><b>IJKL to move Orange</b></font></div>
-  <div class="top-centered"><br><b>Key Mashing Racing Game</b></div>
+  <div class="bottom-centered"><font color="a24fd2"><b>WASD to move Purple</b></font><br> <font color="d61818"><b>IJKL to move Red</b></font></div>
+  <div class="top-centered"><br><b>Key Mashing Swim Game</b></div>
   <div class="centered">
 
-Blue:<div id="myScoreBlue" value= "0"><input type= text id="myTextBlue" value="0" maxlength="4" size="2" readonly style="font-family: 'Press Start 2P'; background-color: #232323; color: white; border: none;">
+Purple:<div id="myScoreBlue" value= "0"><input type= text id="myTextBlue" value="0" maxlength="4" size="2" readonly style="font-family: 'Press Start 2P'; background-color: #232323; color: white; border: none;">
 </div>
-Orange:<div id="myScoreOrange" value="0"><input type= text id="myTextOrange" value="0" maxlength="4" size="2" readonly style="font-family: 'Press Start 2P'; background-color: #232323; color: white; border: none;">
+Red:<div id="myScoreOrange" value="0"><input type= text id="myTextOrange" value="0" maxlength="4" size="2" readonly style="font-family: 'Press Start 2P'; background-color: #232323; color: white; border: none;">
 </div>
 </div>
 </div> 
 </body> 
 </html>
-</head>
+</head> 
  
-<div id="myDiv01" style="position:absolute; left:20; top:250; visibility:visible;  " ><b><img src="https://github.com/mariofish/fischer-coding-2019/blob/master/public/assets/BluemanHD.gif?raw=true" alt="Blue" width="65" height="65"><br>
+<div id="myDiv01" style="position:absolute; left:20; top:220; visibility:visible;  " ><b><img src="https://github.com/mariofish/fischer-coding-2019/blob/master/public/assets/PurplemanHD.gif?raw=true" alt="Blue" width="65" height="65"><br>
 </b></div>
-<div id="myDiv02" style="position:absolute; left:20; top:300;  visibility:visible; " ><b><img src="https://github.com/mariofish/fischer-coding-2019/blob/master/public/assets/OrangemanHD.gif?raw=true" alt="Orange" width="65" height="65"><br>
+<div id="myDiv02" style="position:absolute; left:20; top:280;  visibility:visible; " ><b><img src="https://github.com/mariofish/fischer-coding-2019/blob/master/public/assets/RedmanHD.gif?raw=true" alt="Orange" width="65" height="65"><br>
 </b></div>
 <!-- Jeff movement -->
 <head> 
@@ -91,27 +91,27 @@ function myIsOnScreen(){
         document.getElementById('myDiv01').style.left = '7px'
     document.getElementById('myTextBlue').value = 1 + parseInt(document.getElementById('myTextBlue').value)
     }
-    if (parseInt(document.getElementById('myDiv01').style.top) > 1430) {
-        document.getElementById('myDiv01').style.top = '7px'
+    if (parseInt(document.getElementById('myDiv01').style.top) > 275) {
+        document.getElementById('myDiv01').style.top = '275'
     }
     if (parseInt(document.getElementById('myDiv01').style.left) < 10) {
         document.getElementById('myDiv01').style.left = '7px'
     }
-    if (parseInt(document.getElementById('myDiv01').style.top) < 10) {
-        document.getElementById('myDiv01').style.top = '7px'
+    if (parseInt(document.getElementById('myDiv01').style.top) < 185) { 
+        document.getElementById('myDiv01').style.top = '185'
     }
     if (parseInt(document.getElementById('myDiv02').style.left) > 1430) {
         document.getElementById('myDiv02').style.left = '7px'
         document.getElementById('myTextOrange').value = 1 + parseInt(document.getElementById('myTextOrange').value)
     }
-    if (parseInt(document.getElementById('myDiv02').style.top) > 1430) {
-        document.getElementById('myDiv02').style.top = '7px'
+    if (parseInt(document.getElementById('myDiv02').style.top) > 275) {
+        document.getElementById('myDiv02').style.top = '275px'
     }
     if (parseInt(document.getElementById('myDiv02').style.left) < 10) {
         document.getElementById('myDiv02').style.left = '7px'
     }
-    if (parseInt(document.getElementById('myDiv02').style.top) < 10) {
-        document.getElementById('myDiv02').style.top = '7px'
+    if (parseInt(document.getElementById('myDiv02').style.top) < 185) {
+        document.getElementById('myDiv02').style.top = '185px'
     }
 }
 </script>
